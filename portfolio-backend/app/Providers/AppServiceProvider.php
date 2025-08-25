@@ -20,5 +20,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         //
+        if(file_exists(base_path('routes/api.php'))) {
+            $this->loadRoutesFrom(base_path('routes/api.php'));
+        }
     }
 }
