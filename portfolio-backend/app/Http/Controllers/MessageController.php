@@ -12,20 +12,27 @@ class MessageController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function sendEmail(Request $request)
     {
         //Validate form input
         $request->validate([
-            'name' => 'required|string',
-            'email' => 'required|email',
-            'subject' => 'required|string',
-            'message' => 'required|string'
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'subject' => 'required|string|max:255',
+            'message' => 'required|string|max:255'
         ]);
 
-        $data = $request->all(); //collects all input fields
+        //collects all input fields
+        Mail::send('emails.contact', [
+            'name' => $request->name,
+            'email' => $request->email,
+            'subject' => $request->subject,
+            'message' => $request->message,
+        ], function ($mail) use ($request) {
+            $mail->to('yughiep@gmail.com')
+                 ->subject($request->subject);
+        });
 
-        // Send email to Gmail
-        Mail::to('yughiep@gmail.com')->send(new ContactMessage($data));
 
         return response()->json(['success' => 'Message sent successfully!']);
 
