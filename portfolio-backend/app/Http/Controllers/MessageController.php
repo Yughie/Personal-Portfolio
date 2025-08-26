@@ -3,71 +3,38 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Mail\ContactMessage;
-use Mail;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Log;
 
 class MessageController extends Controller
 {
-  
-    /**
-     * Store a newly created resource in storage.
-     */
     public function sendEmail(Request $request)
     {
-        //Validate form input
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
+        // 1) Validate
+        $validated = $request->validate([
+            'name'    => 'required|string|max:255',
+            'email'   => 'required|email:rfc,dns|max:255',
             'subject' => 'required|string|max:255',
-            'message' => 'required|string|max:255'
+            'body'    => 'required|string|max:5000', // renamed from "message"
         ]);
 
-        //collects all input fields
-        Mail::send('emails.contact', [
-            'name' => $request->name,
-            'email' => $request->email,
-            'subject' => $request->subject,
-            'message' => $request->message,
-        ], function ($mail) use ($request) {
-            $mail->to('yughiep@gmail.com')
-                 ->subject($request->subject);
-        });
+        try {
+            // 2) Send mail using a Blade view
+            Mail::send('emails.contact', $validated, function ($mail) use ($validated) {
+                $mail->to('yughiep@gmail.com')
+                    ->subject($validated['subject'])
+                    // Use your domain as sender:
+                    ->from(config('mail.from.address'), config('mail.from.name'))
+                    // Let replies go to the user:
+                    ->replyTo($validated['email'], $validated['name']);
+            });
 
-
-        return response()->json(['success' => 'Message sent successfully!']);
-
-        
-    }
-      /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
-
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+            return response()->json(['success' => 'Message sent successfully.']);
+        } catch (\Throwable $e) {
+            Log::error('Contact form mail failed: '.$e->getMessage());
+            return response()->json([
+                'message' => 'Failed to send email. Please try again later.'
+            ], 500);
+        }
     }
 }

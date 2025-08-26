@@ -1,8 +1,5 @@
-import './bootstrap';
+// resources/js/app.js
 import { createApp } from 'vue';
-import ContactForm from './component/ContactForm.vue'; 
+import App from './App.vue';
 
-
-const app = createApp({});
-app.component('contact-form', ContactForm);
-app.mount('#app');
+createApp(App).mount('#app');

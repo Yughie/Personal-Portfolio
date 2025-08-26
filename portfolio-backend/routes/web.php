@@ -8,5 +8,4 @@ Route::get('/contact', function () {
     return view('contact'); // This will return the contact view
 });
 
-// Route to handle the form submission
-Route::post('/contact', [MessageController::class, 'sendEmail']);
+Route::post('/send-email', [MessageController::class, 'sendEmail']);
