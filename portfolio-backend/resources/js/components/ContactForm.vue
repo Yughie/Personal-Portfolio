@@ -42,7 +42,7 @@ export default {
       name: '',
       email: '',
       subject: '',
-      body: '',          // renamed
+      body: '',         
       loading: false,
       errors: [],
       successMessage: '',
@@ -62,7 +62,7 @@ export default {
           body: this.body, // match backend
         };
 
-        const res = await axios.post('/send-email', {
+        const res = await axios.post('/api/send-email', {
             name: this.name,
             email: this.email,
             subject: this.subject,

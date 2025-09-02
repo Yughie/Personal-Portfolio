@@ -8,4 +8,4 @@ Route::get('/contact', function () {
     return view('contact'); // This will return the contact view
 });
 
-Route::post('/send-email', [MessageController::class, 'sendEmail']);
+//Route::post('/send-email', [MessageController::class, 'sendEmail']);

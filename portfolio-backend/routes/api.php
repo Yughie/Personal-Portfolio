@@ -3,4 +3,4 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MessageController;
 
-Route::post('/send-email', [MessageController::class, 'sendEmail']);
+Route::post('api/send-email', [MessageController::class, 'sendEmail'])->name('api.send-email.sendEmail');
