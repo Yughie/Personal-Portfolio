@@ -1,9 +1,9 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
-import ContactForm from "./ContactFrom";
+import ContactForm from "./components/ContactFrom";
 import Header from "./components/Header";
+import { Hero } from "./components/hero";
+import { TechStack } from "./components/TechStack";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -12,7 +12,7 @@ function App() {
     <>
       <div className="App">
         <Header></Header>
-        <ContactForm></ContactForm>
+        <Hero></Hero>
       </div>
     </>
   );

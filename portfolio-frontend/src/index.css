@@ -27,6 +27,8 @@ a:hover {
 }
 
 body {
+  @apply font-brand;
+  background-color: #ffffff;
   margin: 0;
   display: flex;
   place-items: center;
