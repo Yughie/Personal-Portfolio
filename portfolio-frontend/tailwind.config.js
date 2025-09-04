@@ -17,6 +17,9 @@ export default {
       fontFamily: {
         brand: ["Montserrat", "sans-serif"], // custom font
       },
+      fontSize: {
+        titileSize: "24",
+      },
     },
       
   },

@@ -98,18 +98,23 @@ const HeroAbout = () => (
     <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-brandblue">
       SOFTWARE ENGINEER
     </h2>
-    <p className="text-base md:text-xl lg:text-xl py-8 text-brandblack max-w-xs md:max-w-lg lg:max-w-4xl">
-      a Computer Science graduate and Software Engineer who transforms ideas
-      into functional, reliable, and user-friendly applications. From developing
-      server-side logic and APIs to creating seamless front-end experiences, I
-      focus on building software that meets both technical and business goals.
-      My creative background in video editing and multimedia design adds an
-      extra layer to how I approach problem-solving and user experience.
+    <p className="text-base md:text-md lg:text-lg py-8 text-brandblack max-w-xs md:max-w-lg lg:max-w-4xl">
+      a{" "}
+      <span className="font-bold text-brandblue">
+        Computer Science graduate (Cum Laude)
+      </span>{" "}
+      and <span className="font-bold text-brandblue">Software Engineer </span>{" "}
+      who transforms ideas into functional, reliable, and user-friendly
+      applications. From developing server-side logic and APIs to creating
+      seamless front-end experiences, I focus on building software that meets
+      both technical and business goals. My creative background in video editing
+      and multimedia design adds an extra layer to how I approach
+      problem-solving and user experience.
     </p>
     <div className="md:flex">
       <a
         href="#contact"
-        className="bg-brandyellow hover:bg-hoveryellow text-brandblack hover:text-brandblack px-8 py-2 rounded-lg font-bold transition"
+        className="bg-brandyellow hover:bg-hoveryellow text-brandblack hover:text-brandblack px-16 py-3 rounded-lg font-bold transition"
       >
         Contact
       </a>
