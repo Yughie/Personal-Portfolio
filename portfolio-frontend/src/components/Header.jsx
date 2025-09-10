@@ -31,7 +31,7 @@ export default function Header() {
         <div className="hidden md:flex">
           <a
             href="#contact"
-            className="bg-brandyellow hover:bg-hoveryellow text-brandblack hover:text-brandblack px-8 py-2 rounded-lg font-bold transition"
+            className="bg-brandyellow hover:bg-hoveryellow text-brandblack hover:text-brandblack px-14 py-2 rounded-lg font-bold transition"
           >
             Contact
           </a>

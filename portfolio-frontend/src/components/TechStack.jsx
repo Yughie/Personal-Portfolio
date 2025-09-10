@@ -1,66 +1,67 @@
 import LogoLoop from "./animation/LogoLoop";
 
+// CORRECTED PATHS: Removed "/public" from the beginning of each src
 const imageLogos = [
   {
-    src: "/public/TechStack/Html.svg",
+    src: "/TechStack/Html.svg",
     alt: "HTML5",
     href: "https://www.w3schools.com/Html/",
   },
   {
-    src: "/public/TechStack/css.svg",
+    src: "/TechStack/Css.svg",
     alt: "CSS",
     href: "https://www.w3schools.com/css/",
   },
   {
-    src: "/public/TechStack/JavaScript.svg",
+    src: "/TechStack/JavaScript.svg",
     alt: "JavaScript",
     href: "https://www.w3schools.com/js/",
   },
   {
-    src: "/public/TechStack/TailwindCss.svg",
+    src: "/TechStack/TailwindCss.svg",
     alt: "Tailwind CSS",
     href: "https://www.geeksforgeeks.org/css/tailwind-css/",
   },
   {
-    src: "/public/TechStack/ReactJs.svg",
+    src: "/TechStack/ReactJs.svg",
     alt: "React JS",
     href: "https://www.geeksforgeeks.org/reactjs/react/",
   },
   {
-    src: "/public/TechStack/NodeJs.svg",
-    alt: "React JS",
+    src: "/TechStack/NodeJs.svg",
+    alt: "Node.js", // Corrected alt text
     href: "https://www.geeksforgeeks.org/node-js/nodejs/",
   },
   {
-    src: "/public/TechStack/Firebase.svg",
-    alt: "React JS",
+    src: "/TechStack/Firebase.svg",
+    alt: "Firebase", // Corrected alt text
     href: "https://www.geeksforgeeks.org/firebase/firebase-tutorial/",
   },
   {
-    src: "/public/TechStack/Php.svg",
-    alt: "React JS",
+    src: "/TechStack/Php.svg",
+    alt: "PHP", // Corrected alt text
     href: "https://www.w3schools.com/php/",
   },
   {
-    src: "/public/TechStack/Laravel.svg",
-    alt: "React JS",
+    src: "/TechStack/Laravel.svg",
+    alt: "Laravel", // Corrected alt text
     href: "https://www.geeksforgeeks.org/php/introduction-to-laravel-and-mvc-framework/",
   },
   {
-    src: "/public/TechStack/Sql.svg",
-    alt: "React JS",
+    src: "/TechStack/Sql.svg",
+    alt: "SQL", // Corrected alt text
     href: "https://www.w3schools.com/sql/",
   },
   {
-    src: "/public/TechStack/MySql.svg",
-    alt: "React JS",
+    src: "/TechStack/MySql.svg",
+    alt: "MySQL", // Corrected alt text
     href: "https://www.w3schools.com/MySQL/",
   },
 ];
 
 const TechStack = () => {
   return (
-    <div className="tech-stack-section py-20 mt-10  bg-gray-50">
+    <div className="tech-stack-section py-20 mt-10 md:mt-0  bg-gray-50">
       <h2 className="text-3xl font-bold pb-10 text-center text-brandblack">
         TECH STACK
       </h2>
@@ -86,7 +87,7 @@ const TechStack = () => {
         <LogoLoop
           logos={imageLogos}
           speed={60}
-          direction="rigth"
+          direction="right" // Corrected typo "rigth" to "right"
           logoHeight={80}
           gap={40}
           pauseOnHover

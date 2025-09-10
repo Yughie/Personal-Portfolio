@@ -1,8 +1,8 @@
 import "./App.css";
 import Header from "./components/Header";
 import { Hero } from "./components/hero";
-import TechStack from "./components/TechStack";
-import Career from "./components/Career";
+import TechStack from "./components/TechStack.jsx";
+import Career from "./components/Career.jsx";
 
 function App() {
   return (
