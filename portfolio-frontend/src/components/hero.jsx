@@ -121,7 +121,7 @@ const HeroAbout = () => (
 const Hero = () => {
   return (
     <section className="min-h-screen w-full flex justify-center items-center">
-      <div className="hero-section flex flex-col gap-10 md:px-10 lg:px-20 xl:px-40 lg:flex-row items-center justify-center w-full h-full">
+      <div className="hero-section flex flex-col gap-10 md:px-10 md:pb-20 lg:px-20 xl:px-40 lg:flex-row items-center justify-center w-full h-full">
         <HeroIntro className="flex-1 " />
         <HeroImage className="flex-1 " />
         <HeroAbout className="flex-1 " />
