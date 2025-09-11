@@ -1,72 +1,189 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import React from "react";
+import ProjectIcon from "../assets/projects.svg";
+import CertificatesIcon from "../assets/certificates.svg";
+import MockupPortfolio from "../assets/mockup-portfolio.png";
+import BookmarkIcon from "../assets/bookmark.svg";
 
 const Showcase = () => {
-  const [selected, setSelected] = React.useState("github");
+  const [selected, setSelected] = React.useState("projects");
 
   return (
     <section className="showcase py-20">
       <h2 className="text-3xl font-bold text-brandblack ">SHOWCASE</h2>
       <p className="text-gray-500 text-lg ">Code. Create. Solve.</p>
 
-      <div className="flex items-center justify-center my-8 border-2 border-gray-300 rounded-md w-fit mx-auto">
-        <button
-          className={`flex items-center justify-center gap-2 min-w-32 md:min-w-44 min-h-14 px-4 py-2 rounded-md transition text-brandblack font-bold ${
-            selected === "github"
-              ? "bg-brandyellow"
-              : "bg-brandwhite hover:bg-brandyellow"
-          }`}
-          onClick={() => setSelected("github")}
-        >
-          <FaGithub className="text-xl text-brandblue mx-auto" />
-          <span className="hidden md:inline w-full text-center">GitHub</span>
-        </button>
-        <button
-          className={`flex items-center justify-center gap-2 min-w-32 md:min-w-44 min-h-14 px-4 py-2 rounded-md transition text-brandblack font-bold ${
-            selected === "linkedin"
-              ? "bg-brandyellow"
-              : "bg-brandwhite hover:bg-brandyellow"
-          }`}
-          onClick={() => setSelected("linkedin")}
-        >
-          <FaLinkedin className="text-xl text-brandblack mx-auto" />
-          <span className="hidden md:inline w-full text-center">LinkedIn</span>
-        </button>
+      <div className="flex items-center justify-center my-8  w-fit mx-auto">
+        <div className="flex border-2 rounded-md overflow-hidden">
+          <button
+            className={`flex items-center justify-center gap-2 min-w-32 md:min-w-44 min-h-14 px-4 py-2 rounded-md transition text-brandblack font-bold ${
+              selected === "projects"
+                ? "bg-brandyellow focus:outline-none"
+                : "bg-brandwhite hover:bg-brandyellow"
+            }`}
+            onClick={() => setSelected("projects")}
+          >
+            {/* ICON */}
+            <div className="flex items-center justify-center w-full h-full">
+              <img src={ProjectIcon} alt="Projects Icon" className="w-8 h-8" />
+            </div>
+
+            <span className="hidden md:inline w-full text-center">
+              Projects
+            </span>
+          </button>
+          <button
+            className={`flex items-center justify-center gap-2 min-w-32 md:min-w-44 min-h-14 px-4 py-2 rounded-md transition text-brandblack font-bold ${
+              selected === "certificates"
+                ? "bg-brandyellow focus:outline-none hover:bg-rgb(255, 255, 3)"
+                : "bg-brandwhite hover:bg-brandyellow"
+            }`}
+            onClick={() => setSelected("certificates")}
+          >
+            <div className="flex items-center justify-center w-full h-full">
+              <img
+                src={CertificatesIcon}
+                alt="Certificates Icon"
+                className="w-8 h-10"
+              />
+            </div>
+            <span className="hidden md:inline w-full text-center">
+              Certificates
+            </span>
+          </button>
+        </div>
       </div>
-      <div className="w-full max-w-4xl mx-auto">
-        {selected === "github" && (
+      <div
+        className="mx-auto"
+        style={{
+          width: "700px",
+          maxWidth: "700px",
+          minWidth: "700px",
+        }}
+      >
+        {selected === "projects" && (
           <div className="grid gap-5 grid-cols-1 sm:grid-cols-2">
             {/* Example GitHub portfolio items */}
-            <div className="bg-brandwhite border rounded-md p-6 shadow animate-fade-in">
+            <div className="relative bg-brandblue border rounded-2xl p-6 shadow animate-fade-in">
               <img
-                src="/images/github-project1.jpg"
-                alt="GitHub Project 1"
-                className="w-full rounded-md p-5 object-cover border-2 min-h-16"
+                src={BookmarkIcon}
+                alt="icon"
+                className="absolute top-0 right-8 w-25 z-10"
               />
-              <h3 className="font-bold text-lg mb-2">GitHub Project 1</h3>
-              <p className="text-gray-600 mb-2">Description of project 1.</p>
+              <div className="aspect-w-16 aspect-h-9 w-full mb-4">
+                <img
+                  src={MockupPortfolio}
+                  alt="Portfolio Project Mock up"
+                  className="w-full h-full object-cover border-none rounded-xl border-2 "
+                  style={{ aspectRatio: "16/9" }}
+                />
+              </div>
+              <h3 className="font-bold text-lg mb-2 text-brandyellow">
+                PERSONAL PORTFOLIO
+              </h3>
+              <p className=" mb-2 text-brandwhite">
+                Life Flow is a Donation and Recipient Management System designed
+                to streamline the process of connecting donors with recipients.
+                Built with a focus...
+              </p>
               <a
                 href="https://github.com/yourusername/project1"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-brandblue underline"
+                className="text-white underline"
               >
                 View on GitHub
               </a>
             </div>
-            <div className="bg-brandwhite border rounded-md p-6 shadow animate-fade-in">
+            <div className="relative bg-brandblue border rounded-2xl p-6 shadow animate-fade-in">
               <img
-                src="/images/github-project2.jpg"
-                alt="GitHub Project 2"
-                className="w-full rounded-md mb-4 p-5 object-cover"
+                src={BookmarkIcon}
+                alt="icon"
+                className="absolute top-0 right-8 w-25 z-10"
               />
-              <h3 className="font-bold text-lg mb-2">GitHub Project 2</h3>
-              <p className="text-gray-600 mb-2">Description of project 2.</p>
+              <div className="aspect-w-16 aspect-h-9 w-full mb-4">
+                <img
+                  src={MockupPortfolio}
+                  alt="Portfolio Project Mock up"
+                  className="w-full h-full object-cover border-none rounded-xl border-2 "
+                  style={{ aspectRatio: "16/9" }}
+                />
+              </div>
+              <h3 className="font-bold text-lg mb-2 text-brandyellow">
+                PERSONAL PORTFOLIO
+              </h3>
+              <p className=" mb-2 text-brandwhite">
+                Life Flow is a Donation and Recipient Management System designed
+                to streamline the process of connecting donors with recipients.
+                Built with a focus...
+              </p>
               <a
-                href="https://github.com/yourusername/project2"
+                href="https://github.com/yourusername/project1"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-brandblue underline"
+                className="text-white underline"
+              >
+                View on GitHub
+              </a>
+            </div>
+            <div className="relative bg-brandblue border rounded-2xl p-6 shadow animate-fade-in">
+              <img
+                src={BookmarkIcon}
+                alt="icon"
+                className="absolute top-0 right-8 w-25 z-10"
+              />
+              <div className="aspect-w-16 aspect-h-9 w-full mb-4">
+                <img
+                  src={MockupPortfolio}
+                  alt="Portfolio Project Mock up"
+                  className="w-full h-full object-cover border-none rounded-xl border-2 "
+                  style={{ aspectRatio: "16/9" }}
+                />
+              </div>
+              <h3 className="font-bold text-lg mb-2 text-brandyellow">
+                PERSONAL PORTFOLIO
+              </h3>
+              <p className=" mb-2 text-brandwhite">
+                Life Flow is a Donation and Recipient Management System designed
+                to streamline the process of connecting donors with recipients.
+                Built with a focus...
+              </p>
+              <a
+                href="https://github.com/yourusername/project1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white underline"
+              >
+                View on GitHub
+              </a>
+            </div>
+            <div className="relative bg-brandblue border rounded-2xl p-6 shadow animate-fade-in">
+              <img
+                src={BookmarkIcon}
+                alt="icon"
+                className="absolute top-0 right-8 w-25 z-10"
+              />
+              <div className="aspect-w-16 aspect-h-9 w-full mb-4">
+                <img
+                  src={MockupPortfolio}
+                  alt="Portfolio Project Mock up"
+                  className="w-full h-full object-cover border-none rounded-xl border-2 "
+                  style={{ aspectRatio: "16/9" }}
+                />
+              </div>
+              <h3 className="font-bold text-lg mb-2 text-brandyellow">
+                PERSONAL PORTFOLIO
+              </h3>
+              <p className=" mb-2 text-brandwhite">
+                Life Flow is a Donation and Recipient Management System designed
+                to streamline the process of connecting donors with recipients.
+                Built with a focus...
+              </p>
+              <a
+                href="https://github.com/yourusername/project1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white underline"
               >
                 View on GitHub
               </a>
@@ -74,41 +191,69 @@ const Showcase = () => {
             {/* Add more GitHub projects as needed */}
           </div>
         )}
-        {selected === "linkedin" && (
+        {selected === "certificates" && (
           <div className="grid gap-5 grid-cols-1 sm:grid-cols-2">
             {/* Example LinkedIn portfolio items */}
-            <div className="bg-brandwhite border rounded-md p-6 shadow animate-fade-in">
+            <div className="relative bg-brandblue border rounded-2xl p-6 shadow animate-fade-in">
               <img
-                src="/images/linkedin-experience1.jpg"
-                alt="LinkedIn Experience 1"
-                className="w-full rounded-md mb-4 p-5 object-cover"
+                src={BookmarkIcon}
+                alt="icon"
+                className="absolute top-0 right-8 w-25 z-10"
               />
-              <h3 className="font-bold text-lg mb-2">LinkedIn Experience 1</h3>
-              <p className="text-gray-600 mb-2">Description of experience 1.</p>
+              <div className="aspect-w-16 aspect-h-9 w-full mb-4">
+                <img
+                  src={MockupPortfolio}
+                  alt="Portfolio Project Mock up"
+                  className="w-full h-full object-cover border-none rounded-xl border-2 "
+                  style={{ aspectRatio: "16/9" }}
+                />
+              </div>
+              <h3 className="font-bold text-lg mb-2 text-brandyellow">
+                CERTIFICATE
+              </h3>
+              <p className=" mb-2 text-brandwhite">
+                Life Flow is a Donation and Recipient Management System designed
+                to streamline the process of connecting donors with recipients.
+                Built with a focus...
+              </p>
               <a
-                href="https://linkedin.com/in/yourusername"
+                href="https://github.com/yourusername/project1"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-brandblue underline"
+                className="text-white underline"
               >
-                View on LinkedIn
+                View on GitHub
               </a>
             </div>
-            <div className="bg-brandwhite border rounded-md p-6 shadow animate-fade-in">
+            <div className="relative bg-brandblue border rounded-2xl p-6 shadow animate-fade-in">
               <img
-                src="/images/linkedin-experience2.jpg"
-                alt="LinkedIn Experience 2"
-                className="w-full rounded-md mb-4 p-5 object-cover"
+                src={BookmarkIcon}
+                alt="icon"
+                className="absolute top-0 right-8 w-25 z-10"
               />
-              <h3 className="font-bold text-lg mb-2">LinkedIn Experience 2</h3>
-              <p className="text-gray-600 mb-2">Description of experience 2.</p>
+              <div className="aspect-w-16 aspect-h-9 w-full mb-4">
+                <img
+                  src={MockupPortfolio}
+                  alt="Portfolio Project Mock up"
+                  className="w-full h-full object-cover border-none rounded-xl border-2 "
+                  style={{ aspectRatio: "16/9" }}
+                />
+              </div>
+              <h3 className="font-bold text-lg mb-2 text-brandyellow">
+                CERTIFICATE
+              </h3>
+              <p className=" mb-2 text-brandwhite">
+                Life Flow is a Donation and Recipient Management System designed
+                to streamline the process of connecting donors with recipients.
+                Built with a focus...
+              </p>
               <a
-                href="https://linkedin.com/in/yourusername"
+                href="https://github.com/yourusername/project1"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-brandblue underline"
+                className="text-white underline"
               >
-                View on LinkedIn
+                View on GitHub
               </a>
             </div>
             {/* Add more LinkedIn experiences as needed */}
@@ -123,6 +268,32 @@ const Showcase = () => {
                 @keyframes fadeIn {
                     from { opacity: 0; transform: translateY(20px);}
                     to { opacity: 1; transform: translateY(0);}
+                }
+                .aspect-w-16.aspect-h-9 {
+                  position: relative;
+                  width: 100%;
+                  padding-top: 56.25%; /* 16:9 ratio */
+                }
+                .aspect-w-16.aspect-h-9 img {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
+                /* Keep container fixed size on all screens */
+                .showcase > div.mx-auto {
+                  width: 350px !important;
+                  min-width: 350px !important;
+                  max-width: 350px !important;
+                }
+                @media (min-width: 700px) {
+                  .showcase > div.mx-auto {
+                    width: 700px !important;
+                    min-width: 700px !important;
+                    max-width: 700px !important;
+                  }
                 }
             `}
       </style>
