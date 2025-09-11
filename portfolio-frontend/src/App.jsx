@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import { Hero } from "./components/hero";
 import TechStack from "./components/TechStack.jsx";
 import Career from "./components/Career.jsx";
+import Showcase from "./components/showcase";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Hero></Hero>
         <TechStack></TechStack>
         <Career></Career>
+        <Showcase></Showcase>
       </div>
     </>
   );
