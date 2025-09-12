@@ -62,9 +62,9 @@ const Showcase = () => {
         }}
       >
         {selected === "projects" && (
-          <div className="grid gap-5 grid-cols-1 sm:grid-cols-2">
+          <div className="flex flex-wrap w-full gap-5 justify-between border-2 lg:in-w-[280px]">
             {/* Example GitHub portfolio items */}
-            <div className="relative bg-brandblue border rounded-2xl p-6 shadow animate-fade-in">
+            <div className="relative bg-brandblue border rounded-2xl p-6 shadow animate-fade-in lg:min-w-[280px] lg:max-w-[350px] lg:flex-1">
               <img
                 src={BookmarkIcon}
                 alt="icon"
@@ -95,7 +95,7 @@ const Showcase = () => {
                 View on GitHub
               </a>
             </div>
-            <div className="relative bg-brandblue border rounded-2xl p-6 shadow animate-fade-in">
+            <div className="relative bg-brandblue border rounded-2xl p-6 shadow animate-fade-in lg:min-w-[280px] lg:max-w-[350px] lg:flex-1">
               <img
                 src={BookmarkIcon}
                 alt="icon"
@@ -126,7 +126,7 @@ const Showcase = () => {
                 View on GitHub
               </a>
             </div>
-            <div className="relative bg-brandblue border rounded-2xl p-6 shadow animate-fade-in">
+            <div className="relative bg-brandblue border rounded-2xl p-6 shadow animate-fade-in lg:min-w-[280px] lg:max-w-[350px] lg:flex-1">
               <img
                 src={BookmarkIcon}
                 alt="icon"
@@ -157,7 +157,7 @@ const Showcase = () => {
                 View on GitHub
               </a>
             </div>
-            <div className="relative bg-brandblue border rounded-2xl p-6 shadow animate-fade-in">
+            <div className="relative bg-brandblue border rounded-2xl p-6 shadow animate-fade-in lg:min-w-[280px] lg:max-w-[350px] lg:flex-1">
               <img
                 src={BookmarkIcon}
                 alt="icon"
@@ -192,7 +192,7 @@ const Showcase = () => {
           </div>
         )}
         {selected === "certificates" && (
-          <div className="grid gap-5 grid-cols-1 sm:grid-cols-2">
+          <div className="grid gap-5 grid-cols-1 sm:grid-cols-4">
             {/* Example LinkedIn portfolio items */}
             <div className="relative bg-brandblue border rounded-2xl p-6 shadow animate-fade-in">
               <img
