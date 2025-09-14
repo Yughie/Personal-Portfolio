@@ -13,7 +13,7 @@ const Showcase = () => {
       <h2 className="text-3xl font-bold text-brandblack ">SHOWCASE</h2>
       <p className="text-gray-500 text-lg ">Code. Create. Solve.</p>
 
-      <div className="flex items-center justify-center my-8  w-fit mx-auto">
+      <div className="flex items-center justify-center my-8 w-full">
         <div className="flex border-2 rounded-md overflow-hidden">
           <button
             className={`flex items-center justify-center gap-2 min-w-32 md:min-w-44 min-h-14 px-4 py-2 rounded-md transition text-brandblack font-bold ${
@@ -53,18 +53,12 @@ const Showcase = () => {
           </button>
         </div>
       </div>
-      <div
-        className="mx-auto"
-        style={{
-          width: "700px",
-          maxWidth: "700px",
-          minWidth: "700px",
-        }}
-      >
+      <div className="mx-auto">
         {selected === "projects" && (
-          <div className="flex flex-wrap w-full gap-5 justify-between border-2 lg:in-w-[280px]">
+          <div className="flex flex-wrap gap-5 mx-10 justify-center w-full border-5 border-black">
             {/* Example GitHub portfolio items */}
-            <div className="relative bg-brandblue border rounded-2xl p-6 shadow animate-fade-in lg:min-w-[280px] lg:max-w-[350px] lg:flex-1">
+
+            <div className="relative bg-brandblue border rounded-2xl p-6 shadow animate-fade-in lg:flex-1">
               <img
                 src={BookmarkIcon}
                 alt="icon"
@@ -95,7 +89,7 @@ const Showcase = () => {
                 View on GitHub
               </a>
             </div>
-            <div className="relative bg-brandblue border rounded-2xl p-6 shadow animate-fade-in lg:min-w-[280px] lg:max-w-[350px] lg:flex-1">
+            <div className="relative bg-brandblue border rounded-2xl p-6 shadow animate-fade-in lg:flex-1">
               <img
                 src={BookmarkIcon}
                 alt="icon"
@@ -126,38 +120,7 @@ const Showcase = () => {
                 View on GitHub
               </a>
             </div>
-            <div className="relative bg-brandblue border rounded-2xl p-6 shadow animate-fade-in lg:min-w-[280px] lg:max-w-[350px] lg:flex-1">
-              <img
-                src={BookmarkIcon}
-                alt="icon"
-                className="absolute top-0 right-8 w-25 z-10"
-              />
-              <div className="aspect-w-16 aspect-h-9 w-full mb-4">
-                <img
-                  src={MockupPortfolio}
-                  alt="Portfolio Project Mock up"
-                  className="w-full h-full object-cover border-none rounded-xl border-2 "
-                  style={{ aspectRatio: "16/9" }}
-                />
-              </div>
-              <h3 className="font-bold text-lg mb-2 text-brandyellow">
-                PERSONAL PORTFOLIO
-              </h3>
-              <p className=" mb-2 text-brandwhite">
-                Life Flow is a Donation and Recipient Management System designed
-                to streamline the process of connecting donors with recipients.
-                Built with a focus...
-              </p>
-              <a
-                href="https://github.com/yourusername/project1"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white underline"
-              >
-                View on GitHub
-              </a>
-            </div>
-            <div className="relative bg-brandblue border rounded-2xl p-6 shadow animate-fade-in lg:min-w-[280px] lg:max-w-[350px] lg:flex-1">
+            <div className="relative bg-brandblue border rounded-2xl p-6 shadow animate-fade-in lg:flex-1">
               <img
                 src={BookmarkIcon}
                 alt="icon"
@@ -284,17 +247,12 @@ const Showcase = () => {
                 }
                 /* Keep container fixed size on all screens */
                 .showcase > div.mx-auto {
-                  width: 350px !important;
-                  min-width: 350px !important;
-                  max-width: 350px !important;
+                  width: 100%;
+                  max-width: 1200px;
+                  margin: 0 auto;
+                  padding: 0 1rem;
                 }
-                @media (min-width: 700px) {
-                  .showcase > div.mx-auto {
-                    width: 700px !important;
-                    min-width: 700px !important;
-                    max-width: 700px !important;
-                  }
-                }
+
             `}
       </style>
     </section>
