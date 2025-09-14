@@ -55,10 +55,10 @@ const Showcase = () => {
       </div>
       <div className="mx-auto">
         {selected === "projects" && (
-          <div className="flex flex-wrap gap-5 mx-10 justify-center w-full border-5 border-black">
+          <div className="flex flex-wrap gap-5 justify-center w-full p-10 border-5 border-black">
             {/* Example GitHub portfolio items */}
 
-            <div className="relative bg-brandblue border rounded-2xl p-6 shadow animate-fade-in lg:flex-1">
+            <div className="relative bg-brandblue border rounded-2xl p-6 shadow-xl animate-fade-in  max-w-lg max-h-[600px] w-full">
               <img
                 src={BookmarkIcon}
                 alt="icon"
@@ -78,6 +78,11 @@ const Showcase = () => {
               <p className=" mb-2 text-brandwhite">
                 Life Flow is a Donation and Recipient Management System designed
                 to streamline the process of connecting donors with recipients.
+                Built with a focus... Life Flow is a Donation and Recipient
+                Management System designed to streamline the process of
+                connecting donors with recipients. Built with a focus... Life
+                Flow is a Donation and Recipient Management System designed to
+                streamline the process of connecting donors with recipients.
                 Built with a focus...
               </p>
               <a
@@ -89,7 +94,7 @@ const Showcase = () => {
                 View on GitHub
               </a>
             </div>
-            <div className="relative bg-brandblue border rounded-2xl p-6 shadow animate-fade-in lg:flex-1">
+            <div className="relative bg-brandblue border rounded-2xl p-6 shadow-xl animate-fade-in  max-w-lg max-h-[600px] w-full">
               <img
                 src={BookmarkIcon}
                 alt="icon"
@@ -109,6 +114,11 @@ const Showcase = () => {
               <p className=" mb-2 text-brandwhite">
                 Life Flow is a Donation and Recipient Management System designed
                 to streamline the process of connecting donors with recipients.
+                Built with a focus... Life Flow is a Donation and Recipient
+                Management System designed to streamline the process of
+                connecting donors with recipients. Built with a focus... Life
+                Flow is a Donation and Recipient Management System designed to
+                streamline the process of connecting donors with recipients.
                 Built with a focus...
               </p>
               <a
@@ -120,7 +130,7 @@ const Showcase = () => {
                 View on GitHub
               </a>
             </div>
-            <div className="relative bg-brandblue border rounded-2xl p-6 shadow animate-fade-in lg:flex-1">
+            <div className="relative bg-brandblue border rounded-2xl p-6 shadow-xl animate-fade-in  max-w-lg max-h-[600px] w-full">
               <img
                 src={BookmarkIcon}
                 alt="icon"
@@ -140,6 +150,47 @@ const Showcase = () => {
               <p className=" mb-2 text-brandwhite">
                 Life Flow is a Donation and Recipient Management System designed
                 to streamline the process of connecting donors with recipients.
+                Built with a focus... Life Flow is a Donation and Recipient
+                Management System designed to streamline the process of
+                connecting donors with recipients. Built with a focus... Life
+                Flow is a Donation and Recipient Management System designed to
+                streamline the process of connecting donors with recipients.
+                Built with a focus...
+              </p>
+              <a
+                href="https://github.com/yourusername/project1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white underline"
+              >
+                View on GitHub
+              </a>
+            </div>
+            <div className="relative bg-brandblue border rounded-2xl p-6 shadow-xl animate-fade-in  max-w-lg max-h-[600px] w-full">
+              <img
+                src={BookmarkIcon}
+                alt="icon"
+                className="absolute top-0 right-8 w-25 z-10"
+              />
+              <div className="aspect-w-16 aspect-h-9 w-full mb-4">
+                <img
+                  src={MockupPortfolio}
+                  alt="Portfolio Project Mock up"
+                  className="w-full h-full object-cover border-none rounded-xl border-2 "
+                  style={{ aspectRatio: "16/9" }}
+                />
+              </div>
+              <h3 className="font-bold text-lg mb-2 text-brandyellow">
+                PERSONAL PORTFOLIO
+              </h3>
+              <p className=" mb-2 text-brandwhite">
+                Life Flow is a Donation and Recipient Management System designed
+                to streamline the process of connecting donors with recipients.
+                Built with a focus... Life Flow is a Donation and Recipient
+                Management System designed to streamline the process of
+                connecting donors with recipients. Built with a focus... Life
+                Flow is a Donation and Recipient Management System designed to
+                streamline the process of connecting donors with recipients.
                 Built with a focus...
               </p>
               <a
