@@ -4,6 +4,8 @@ import ProjectIcon from "../assets/projects.svg";
 import CertificatesIcon from "../assets/certificates.svg";
 import MockupPortfolio from "../assets/mockup-portfolio.png";
 import BookmarkIcon from "../assets/bookmark.svg";
+import Demo from "../assets/demo.svg";
+import DemoHover from "../assets/demo-hover.svg";
 
 const Showcase = () => {
   const [selected, setSelected] = React.useState("projects");
@@ -55,10 +57,10 @@ const Showcase = () => {
       </div>
       <div className="mx-auto">
         {selected === "projects" && (
-          <div className="flex flex-wrap gap-5 justify-center w-full p-10 border-5 border-black">
+          <div className="flex flex-wrap gap-5 justify-center w-full p-10 border-5">
             {/* Example GitHub portfolio items */}
 
-            <div className="relative bg-brandblue border rounded-2xl p-6 shadow-xl animate-fade-in  max-w-lg max-h-[600px] w-full">
+            <div className="relative bg-brandblue border rounded-2xl p-6 shadow-xl animate-fade-in  max-w-lg min-h-[550px] max-h-[550px]  w-full hover:scale-105 transition-transform duration-300">
               <img
                 src={BookmarkIcon}
                 alt="icon"
@@ -80,21 +82,27 @@ const Showcase = () => {
                 to streamline the process of connecting donors with recipients.
                 Built with a focus... Life Flow is a Donation and Recipient
                 Management System designed to streamline the process of
-                connecting donors with recipients. Built with a focus... Life
-                Flow is a Donation and Recipient Management System designed to
-                streamline the process of connecting donors with recipients.
-                Built with a focus...
               </p>
               <a
                 href="https://github.com/yourusername/project1"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white underline"
+                className="group flex items-center justify-center gap-2 absolute bottom-2 right-5 text-white underline px-3 py-2 rounded-lg hover:bg-opacity-20 transition hover:text-brandyellow"
               >
-                View on GitHub
+                Live Demo
+                <img
+                  src={Demo}
+                  alt="Demo"
+                  className="w-8 h-8 block group-hover:hidden"
+                />
+                <img
+                  src={DemoHover}
+                  alt="Demo hover"
+                  className="w-8 h-8 hidden group-hover:block"
+                />
               </a>
             </div>
-            <div className="relative bg-brandblue border rounded-2xl p-6 shadow-xl animate-fade-in  max-w-lg max-h-[600px] w-full">
+            <div className="relative bg-brandblue border rounded-2xl p-6 shadow-xl animate-fade-in  max-w-lg min-h-[550px] max-h-[550px]  w-full hover:scale-105 transition-transform duration-300">
               <img
                 src={BookmarkIcon}
                 alt="icon"
@@ -116,21 +124,27 @@ const Showcase = () => {
                 to streamline the process of connecting donors with recipients.
                 Built with a focus... Life Flow is a Donation and Recipient
                 Management System designed to streamline the process of
-                connecting donors with recipients. Built with a focus... Life
-                Flow is a Donation and Recipient Management System designed to
-                streamline the process of connecting donors with recipients.
-                Built with a focus...
               </p>
               <a
                 href="https://github.com/yourusername/project1"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white underline"
+                className="group flex items-center justify-center gap-2 absolute bottom-2 right-5 text-white underline px-3 py-2 rounded-lg hover:bg-opacity-20 transition hover:text-brandyellow"
               >
-                View on GitHub
+                Live Demo
+                <img
+                  src={Demo}
+                  alt="Demo"
+                  className="w-8 h-8 block group-hover:hidden"
+                />
+                <img
+                  src={DemoHover}
+                  alt="Demo hover"
+                  className="w-8 h-8 hidden group-hover:block"
+                />
               </a>
             </div>
-            <div className="relative bg-brandblue border rounded-2xl p-6 shadow-xl animate-fade-in  max-w-lg max-h-[600px] w-full">
+            <div className="relative bg-brandblue border rounded-2xl p-6 shadow-xl animate-fade-in  max-w-lg min-h-[550px] max-h-[550px]  w-full hover:scale-105 transition-transform duration-300">
               <img
                 src={BookmarkIcon}
                 alt="icon"
@@ -152,21 +166,27 @@ const Showcase = () => {
                 to streamline the process of connecting donors with recipients.
                 Built with a focus... Life Flow is a Donation and Recipient
                 Management System designed to streamline the process of
-                connecting donors with recipients. Built with a focus... Life
-                Flow is a Donation and Recipient Management System designed to
-                streamline the process of connecting donors with recipients.
-                Built with a focus...
               </p>
               <a
                 href="https://github.com/yourusername/project1"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white underline"
+                className="group flex items-center justify-center gap-2 absolute bottom-2 right-5 text-white underline px-3 py-2 rounded-lg hover:bg-opacity-20 transition hover:text-brandyellow"
               >
-                View on GitHub
+                Live Demo
+                <img
+                  src={Demo}
+                  alt="Demo"
+                  className="w-8 h-8 block group-hover:hidden"
+                />
+                <img
+                  src={DemoHover}
+                  alt="Demo hover"
+                  className="w-8 h-8 hidden group-hover:block"
+                />
               </a>
             </div>
-            <div className="relative bg-brandblue border rounded-2xl p-6 shadow-xl animate-fade-in  max-w-lg max-h-[600px] w-full">
+            <div className="relative bg-brandblue border rounded-2xl p-6 shadow-xl animate-fade-in  max-w-lg min-h-[550px] max-h-[550px]  w-full hover:scale-105 transition-transform duration-300">
               <img
                 src={BookmarkIcon}
                 alt="icon"
@@ -188,27 +208,34 @@ const Showcase = () => {
                 to streamline the process of connecting donors with recipients.
                 Built with a focus... Life Flow is a Donation and Recipient
                 Management System designed to streamline the process of
-                connecting donors with recipients. Built with a focus... Life
-                Flow is a Donation and Recipient Management System designed to
-                streamline the process of connecting donors with recipients.
-                Built with a focus...
               </p>
               <a
                 href="https://github.com/yourusername/project1"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white underline"
+                className="group flex items-center justify-center gap-2 absolute bottom-2 right-5 text-white underline px-3 py-2 rounded-lg hover:bg-opacity-20 transition hover:text-brandyellow"
               >
-                View on GitHub
+                Live Demo
+                <img
+                  src={Demo}
+                  alt="Demo"
+                  className="w-8 h-8 block group-hover:hidden"
+                />
+                <img
+                  src={DemoHover}
+                  alt="Demo hover"
+                  className="w-8 h-8 hidden group-hover:block"
+                />
               </a>
             </div>
+
             {/* Add more GitHub projects as needed */}
           </div>
         )}
         {selected === "certificates" && (
-          <div className="grid gap-5 grid-cols-1 sm:grid-cols-4">
+          <div className="flex flex-wrap gap-5 justify-center w-full p-10 border-5 border-black">
             {/* Example LinkedIn portfolio items */}
-            <div className="relative bg-brandblue border rounded-2xl p-6 shadow animate-fade-in">
+            <div className="relative bg-brandblue border rounded-2xl p-6 shadow-xl animate-fade-in  max-w-lg min-h-[550px] max-h-[550px]  w-full hover:scale-105 transition-transform duration-300">
               <img
                 src={BookmarkIcon}
                 alt="icon"
@@ -223,23 +250,34 @@ const Showcase = () => {
                 />
               </div>
               <h3 className="font-bold text-lg mb-2 text-brandyellow">
-                CERTIFICATE
+                PERSONAL PORTFOLIO
               </h3>
               <p className=" mb-2 text-brandwhite">
                 Life Flow is a Donation and Recipient Management System designed
                 to streamline the process of connecting donors with recipients.
-                Built with a focus...
+                Built with a focus... Life Flow is a Donation and Recipient
+                Management System designed to streamline the process of
               </p>
               <a
                 href="https://github.com/yourusername/project1"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white underline"
+                className="group flex items-center justify-center gap-2 absolute bottom-2 right-5 text-white underline px-3 py-2 rounded-lg hover:bg-opacity-20 transition hover:text-brandyellow"
               >
-                View on GitHub
+                Live Demo
+                <img
+                  src={Demo}
+                  alt="Demo"
+                  className="w-8 h-8 block group-hover:hidden"
+                />
+                <img
+                  src={DemoHover}
+                  alt="Demo hover"
+                  className="w-8 h-8 hidden group-hover:block"
+                />
               </a>
             </div>
-            <div className="relative bg-brandblue border rounded-2xl p-6 shadow animate-fade-in">
+            <div className="relative bg-brandblue border rounded-2xl p-6 shadow-xl animate-fade-in  max-w-lg min-h-[550px] max-h-[550px]  w-full hover:scale-105 transition-transform duration-300">
               <img
                 src={BookmarkIcon}
                 alt="icon"
@@ -254,20 +292,31 @@ const Showcase = () => {
                 />
               </div>
               <h3 className="font-bold text-lg mb-2 text-brandyellow">
-                CERTIFICATE
+                PERSONAL PORTFOLIO
               </h3>
               <p className=" mb-2 text-brandwhite">
                 Life Flow is a Donation and Recipient Management System designed
                 to streamline the process of connecting donors with recipients.
-                Built with a focus...
+                Built with a focus... Life Flow is a Donation and Recipient
+                Management System designed to streamline the process of
               </p>
               <a
                 href="https://github.com/yourusername/project1"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white underline"
+                className="group flex items-center justify-center gap-2 absolute bottom-2 right-5 text-white underline px-3 py-2 rounded-lg hover:bg-opacity-20 transition hover:text-brandyellow"
               >
-                View on GitHub
+                Live Demo
+                <img
+                  src={Demo}
+                  alt="Demo"
+                  className="w-8 h-8 block group-hover:hidden"
+                />
+                <img
+                  src={DemoHover}
+                  alt="Demo hover"
+                  className="w-8 h-8 hidden group-hover:block"
+                />
               </a>
             </div>
             {/* Add more LinkedIn experiences as needed */}

@@ -13,6 +13,7 @@ export default {
         brandyellow: "#FFC303",
         hoveryellow: "#DBAB11",
         brandblack: "#000000",
+        brandgrey: "#585858",
       },
       fontFamily: {
         brand: ["Montserrat", "sans-serif"], // custom font

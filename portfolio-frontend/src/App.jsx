@@ -4,6 +4,7 @@ import { Hero } from "./components/hero";
 import TechStack from "./components/TechStack.jsx";
 import Career from "./components/Career.jsx";
 import Showcase from "./components/showcase";
+import ContactForm from "./components/ContactForm.jsx";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <TechStack></TechStack>
         <Career></Career>
         <Showcase></Showcase>
+        <ContactForm></ContactForm>
       </div>
     </>
   );
