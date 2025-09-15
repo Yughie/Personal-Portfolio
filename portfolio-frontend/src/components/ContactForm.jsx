@@ -36,8 +36,8 @@ export default function ContactForm() {
     }
   };
   return (
-    <section className="contact-form bg-brandyellow py-20 ">
-      <div className="flex flex-col gap-5 text-brandblack text-center ">
+    <section className="contact-form flex flex-col lg:flex-row bg-brandyellow py-20 ">
+      <div className="flex-1 flex-col gap-5 text-brandblack text-center ">
         <h2 className="font-bold text-5xl">GET IN TOUCH</h2>
         <img src={ProfileImage} alt="Contact Image" className="w-64 mx-auto" />
         <h2 className="font-bold text-2xl">Contact Information</h2>
@@ -81,10 +81,10 @@ export default function ContactForm() {
           </a>
         </div>
       </div>
-      <div className="contact my-20 mx-10   shadow-lg">
+      <div className="flex-1 justify-center contact my-20">
         <form
           onSubmit={handleSubmit}
-          className="bg-brandwhite p-5 rounded-md gap-4 flex flex-col"
+          className="bg-brandwhite min-w-[500px] max-w-[700px] max-h-[1200px] align-center  p-5 rounded-md gap-4 flex flex-col"
         >
           <h2 className="text-brandblack font-bold text-2xl">Send a Message</h2>
           <div className="flex flex-col">
@@ -157,9 +157,9 @@ export default function ContactForm() {
           </div>
 
           <button type="submit">Send</button>
+          {status && <p>{status}</p>}
         </form>
       </div>
-      {status && <p>{status}</p>}
     </section>
   );
 }
