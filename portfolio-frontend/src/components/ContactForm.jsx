@@ -9,10 +9,10 @@ import phone from "../assets/phone.svg";
 
 export default function ContactForm() {
   const [form, setForm] = useState({
-    name: "NameTemplate",
-    email: "EmailTemplate@gmail.com",
-    subject: "TemplateSubject",
-    body: "Templatemessage",
+    name: "",
+    email: "",
+    subject: "",
+    body: "",
   });
 
   const [status, setStatus] = useState("");
@@ -36,8 +36,8 @@ export default function ContactForm() {
     }
   };
   return (
-    <section className="contact-form flex flex-col lg:flex-row bg-brandyellow py-20 ">
-      <div className="flex-1 flex-col gap-5 text-brandblack text-center ">
+    <section className="contact-form flex flex-col lg:flex-row bg-brandyellow pt-20 md:py-20 ">
+      <div className="flex-1 flex-col gap-5 text-brandblack text-center  ">
         <h2 className="font-bold text-5xl">GET IN TOUCH</h2>
         <img src={ProfileImage} alt="Contact Image" className="w-64 mx-auto" />
         <h2 className="font-bold text-2xl">Contact Information</h2>
@@ -81,12 +81,14 @@ export default function ContactForm() {
           </a>
         </div>
       </div>
-      <div className="flex-1 justify-center contact my-20">
+      <div className="flex-1 justify-center contact mt-20 lg:mt-0 md:my-20 md:px-20 lg:px-10 transition-all">
         <form
           onSubmit={handleSubmit}
-          className="bg-brandwhite min-w-[500px] max-w-[700px] max-h-[1200px] align-center  p-5 rounded-md gap-4 flex flex-col"
+          className="bg-brandwhite align-center p-5 rounded-md gap-4 flex flex-col"
         >
-          <h2 className="text-brandblack font-bold text-2xl">Send a Message</h2>
+          <h2 className="text-brandblack font-bold text-2xl my-6">
+            Send a Message
+          </h2>
           <div className="flex flex-col">
             <label
               htmlFor="Name"
@@ -101,7 +103,9 @@ export default function ContactForm() {
               value={form.name}
               onChange={handleChange}
               required
-              className={"p-2 rounded-md border border-brandblack bg-brandgrey"}
+              className={
+                "p-2 rounded-md border border-brandblack bg-[#DFDFDF] text-brandblack"
+              }
             />
           </div>
 
@@ -119,7 +123,9 @@ export default function ContactForm() {
               value={form.email}
               onChange={handleChange}
               required
-              className={"p-2 rounded-md border border-brandblack bg-brandgrey"}
+              className={
+                "p-2 rounded-md border border-brandblack bg-[#DFDFDF] text-brandblack"
+              }
             />
           </div>
           <div className="flex flex-col">
@@ -136,7 +142,9 @@ export default function ContactForm() {
               value={form.subject}
               onChange={handleChange}
               required
-              className={"p-2 rounded-md border border-brandblack bg-brandgrey"}
+              className={
+                "p-2 rounded-md border border-brandblack bg-[#DFDFDF] text-brandblack"
+              }
             />
           </div>
           <div className="flex flex-col">
@@ -152,11 +160,18 @@ export default function ContactForm() {
               value={form.body}
               onChange={handleChange}
               required
-              className={"p-2 rounded-md border border-brandblack bg-brandgrey"}
+              className={
+                "p-2 rounded-md border border-brandblack bg-[#DFDFDF] text-brandblack h-40"
+              }
             />
           </div>
 
-          <button type="submit">Send</button>
+          <button
+            type="submit"
+            className="bg-brandblue w-[300px] mx-auto mt-5 text-brandwhite p-2 rounded-md font-bold hover:bg-blue-700 transition-colors"
+          >
+            Send
+          </button>
           {status && <p>{status}</p>}
         </form>
       </div>
