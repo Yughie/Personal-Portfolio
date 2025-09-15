@@ -5,6 +5,7 @@ import TechStack from "./components/TechStack.jsx";
 import Career from "./components/Career.jsx";
 import Showcase from "./components/showcase";
 import ContactForm from "./components/ContactForm.jsx";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Career></Career>
         <Showcase></Showcase>
         <ContactForm></ContactForm>
+        <Footer></Footer>
       </div>
     </>
   );

@@ -39,12 +39,16 @@ export default function ContactForm() {
     <section className="contact-form flex flex-col lg:flex-row bg-brandyellow pt-20 md:py-20 ">
       <div className="flex-1 flex-col gap-5 text-brandblack text-center  ">
         <h2 className="font-bold text-5xl">GET IN TOUCH</h2>
-        <img src={ProfileImage} alt="Contact Image" className="w-64 mx-auto" />
+        <img
+          src={ProfileImage}
+          alt="Contact Image"
+          className="w-64 mx-auto  my-5"
+        />
         <h2 className="font-bold text-2xl">Contact Information</h2>
-        <img src={mail} alt="Mail Icon" className="w-15 mx-auto" />
-        <p>yughiep@.gmail.com</p>
-        <img src={phone} alt="Phone Icon" className="w-15 mx-auto" />
-        <p>(63+) 123 456 789</p>
+        <img src={mail} alt="Mail Icon" className="w-15 mx-auto  my-5" />
+        <p className="font-semibold">yughiep@.gmail.com</p>
+        <img src={phone} alt="Phone Icon" className="w-15 mx-auto my-5" />
+        <p className="font-semibold">(63+) 123 456 789</p>
         <div className="flex justify-center mt-6 w-full space-x-6">
           <a
             href="https://www.facebook.com/ymperez12"
@@ -81,12 +85,12 @@ export default function ContactForm() {
           </a>
         </div>
       </div>
-      <div className="flex-1 justify-center contact mt-20 lg:mt-0 md:my-20 md:px-20 lg:px-10 transition-all">
+      <div className="flex-1 contact mt-20 md:my-20 md:px-20 lg:my-0 transition-all lg:flex lg:justify-center lg:items-center">
         <form
           onSubmit={handleSubmit}
-          className="bg-brandwhite align-center p-5 rounded-md gap-4 flex flex-col"
+          className="bg-brandwhite align-center p-10 rounded-md w-full gap-4 flex flex-col"
         >
-          <h2 className="text-brandblack font-bold text-2xl my-6">
+          <h2 className="text-brandblack font-bold text-3xl my-6">
             Send a Message
           </h2>
           <div className="flex flex-col">
@@ -168,7 +172,7 @@ export default function ContactForm() {
 
           <button
             type="submit"
-            className="bg-brandblue w-[300px] mx-auto mt-5 text-brandwhite p-2 rounded-md font-bold hover:bg-blue-700 transition-colors"
+            className="bg-brandblue w-[300px] mx-auto mt-5 text-brandwhite p-2 mb-10 rounded-md font-bold hover:bg-blue-700 transition-colors"
           >
             Send
           </button>
