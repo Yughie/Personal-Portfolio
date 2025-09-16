@@ -1,4 +1,3 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
 import React from "react";
 import ProjectIcon from "../assets/projects.svg";
 import CertificatesIcon from "../assets/certificates.svg";
