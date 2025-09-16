@@ -1,11 +1,11 @@
 import "./App.css";
-import Header from "./components/Header";
-import { Hero } from "./components/hero";
+import Header from "./components/Header.jsx";
+import { Hero } from "./components/hero.jsx";
 import TechStack from "./components/TechStack.jsx";
 import Career from "./components/Career.jsx";
-import Showcase from "./components/showcase";
+import Showcase from "./components/Showcase.jsx";
 import ContactForm from "./components/ContactForm.jsx";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer.jsx";
 
 function App() {
   return (
