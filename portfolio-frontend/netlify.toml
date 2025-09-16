@@ -1,4 +1,4 @@
 [build]
   base = "portfolio-frontend"
-  command = "npm run build"
+  command = "pnpm run build"
   publish = "dist"
