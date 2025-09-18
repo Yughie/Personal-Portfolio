@@ -1,5 +1,5 @@
 import React from "react";
-import SplitText from "./animation/SplitText";
+import SplitText from "./SplitText";
 import FacebookIcon from "../assets/facebook.svg";
 import GithubIcon from "../assets/github.svg";
 import LinkedinIcon from "../assets/linkedin.svg";

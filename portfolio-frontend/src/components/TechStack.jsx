@@ -1,59 +1,59 @@
-import LogoLoop from "./animation/LogoLoop";
+import LogoLoop from "./LogoLoop";
 
 // CORRECTED PATHS: Removed "/public" from the beginning of each src
 const imageLogos = [
   {
-    src: "/TechStack/Html.svg",
+    src: "./TechStack/Html.svg",
     alt: "HTML5",
     href: "https://www.w3schools.com/Html/",
   },
   {
-    src: "/TechStack/Css.svg",
+    src: "./TechStack/Css.svg",
     alt: "CSS",
     href: "https://www.w3schools.com/css/",
   },
   {
-    src: "/TechStack/JavaScript.svg",
+    src: "./TechStack/JavaScript.svg",
     alt: "JavaScript",
     href: "https://www.w3schools.com/js/",
   },
   {
-    src: "/TechStack/TailwindCss.svg",
+    src: "./TechStack/TailwindCss.svg",
     alt: "Tailwind CSS",
     href: "https://www.geeksforgeeks.org/css/tailwind-css/",
   },
   {
-    src: "/TechStack/ReactJs.svg",
+    src: "./TechStack/ReactJs.svg",
     alt: "React JS",
     href: "https://www.geeksforgeeks.org/reactjs/react/",
   },
   {
-    src: "/TechStack/NodeJs.svg",
+    src: "./TechStack/NodeJs.svg",
     alt: "Node.js", // Corrected alt text
     href: "https://www.geeksforgeeks.org/node-js/nodejs/",
   },
   {
-    src: "/TechStack/Firebase.svg",
+    src: "./TechStack/Firebase.svg",
     alt: "Firebase", // Corrected alt text
     href: "https://www.geeksforgeeks.org/firebase/firebase-tutorial/",
   },
   {
-    src: "/TechStack/Php.svg",
+    src: "./TechStack/Php.svg",
     alt: "PHP", // Corrected alt text
     href: "https://www.w3schools.com/php/",
   },
   {
-    src: "/TechStack/Laravel.svg",
+    src: "./TechStack/Laravel.svg",
     alt: "Laravel", // Corrected alt text
     href: "https://www.geeksforgeeks.org/php/introduction-to-laravel-and-mvc-framework/",
   },
   {
-    src: "/TechStack/Sql.svg",
+    src: "./TechStack/Sql.svg",
     alt: "SQL", // Corrected alt text
     href: "https://www.w3schools.com/sql/",
   },
   {
-    src: "/TechStack/MySql.svg",
+    src: "./TechStack/MySql.svg",
     alt: "MySQL", // Corrected alt text
     href: "https://www.w3schools.com/MySQL/",
   },
