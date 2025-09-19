@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: process.env.VITE_BASE_URL || '/Personal-Portfolio',
+  base: process.env.VITE_BASE_URL || '/personal-portfolio',
   optimizeDeps: {
     include: ['prop-types']
   }
