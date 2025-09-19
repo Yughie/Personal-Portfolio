@@ -1,59 +1,70 @@
 import LogoLoop from "./LogoLoop";
+import htmlLogo from "../assets/TechStack/Html.svg";
+import cssLogo from "../assets/TechStack/Css.svg";
+import jsLogo from "../assets/TechStack/JavaScript.svg";
+import tailwindLogo from "../assets/TechStack/TailwindCss.svg";
+import reactLogo from "../assets/TechStack/ReactJs.svg";
+import nodeLogo from "../assets/TechStack/NodeJs.svg";
+import firebaseLogo from "../assets/TechStack/Firebase.svg";
+import phpLogo from "../assets/TechStack/Php.svg";
+import laravelLogo from "../assets/TechStack/Laravel.svg";
+import sqlLogo from "../assets/TechStack/Sql.svg";
+import mysqlLogo from "../assets/TechStack/MySql.svg";
 
 // CORRECTED PATHS: Removed "/public" from the beginning of each src
 const imageLogos = [
   {
-    src: "./TechStack/Html.svg",
+    src: htmlLogo,
     alt: "HTML5",
     href: "https://www.w3schools.com/Html/",
   },
   {
-    src: "./TechStack/Css.svg",
+    src: cssLogo,
     alt: "CSS",
     href: "https://www.w3schools.com/css/",
   },
   {
-    src: "./TechStack/JavaScript.svg",
+    src: jsLogo,
     alt: "JavaScript",
     href: "https://www.w3schools.com/js/",
   },
   {
-    src: "./TechStack/TailwindCss.svg",
+    src: tailwindLogo,
     alt: "Tailwind CSS",
     href: "https://www.geeksforgeeks.org/css/tailwind-css/",
   },
   {
-    src: "./TechStack/ReactJs.svg",
+    src: reactLogo,
     alt: "React JS",
     href: "https://www.geeksforgeeks.org/reactjs/react/",
   },
   {
-    src: "./TechStack/NodeJs.svg",
+    src: nodeLogo,
     alt: "Node.js", // Corrected alt text
     href: "https://www.geeksforgeeks.org/node-js/nodejs/",
   },
   {
-    src: "./TechStack/Firebase.svg",
+    src: firebaseLogo,
     alt: "Firebase", // Corrected alt text
     href: "https://www.geeksforgeeks.org/firebase/firebase-tutorial/",
   },
   {
-    src: "./TechStack/Php.svg",
+    src: phpLogo,
     alt: "PHP", // Corrected alt text
     href: "https://www.w3schools.com/php/",
   },
   {
-    src: "./TechStack/Laravel.svg",
+    src: laravelLogo,
     alt: "Laravel", // Corrected alt text
     href: "https://www.geeksforgeeks.org/php/introduction-to-laravel-and-mvc-framework/",
   },
   {
-    src: "./TechStack/Sql.svg",
+    src: sqlLogo,
     alt: "SQL", // Corrected alt text
     href: "https://www.w3schools.com/sql/",
   },
   {
-    src: "./TechStack/MySql.svg",
+    src: mysqlLogo,
     alt: "MySQL", // Corrected alt text
     href: "https://www.w3schools.com/MySQL/",
   },
