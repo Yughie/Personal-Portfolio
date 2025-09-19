@@ -1,5 +1,11 @@
 {
-  "version": 2,
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist"
+  "builds": [
+    {
+      "src": "portfolio-frontend/package.json",
+      "use": "@vercel/static-build"
+    }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/portfolio-frontend/dist/$1" }
+  ]
 }
