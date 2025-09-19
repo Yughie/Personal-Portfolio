@@ -1,10 +1,6 @@
 {
   "version": 2,
-  "projects": [
-    {
-      "rootDirectory": "portfolio-frontend",
-      "buildCommand": "npm run build",
-      "outputDirectory": "dist"
-    }
-  ]
+  "rootDirectory": "portfolio-frontend",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist"
 }
