@@ -36,7 +36,10 @@ export default function ContactForm() {
     }
   };
   return (
-    <section className="contact-form flex flex-col lg:flex-row bg-brandyellow pt-20 md:py-20 ">
+    <section
+      id="contact"
+      className="contact-form flex flex-col lg:flex-row bg-brandyellow pt-20 md:py-20 "
+    >
       <div className="flex-1 flex-col gap-5 text-brandblack text-center  ">
         <h2 className="font-bold text-5xl">GET IN TOUCH</h2>
         <img

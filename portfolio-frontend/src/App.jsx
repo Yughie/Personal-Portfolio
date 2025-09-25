@@ -14,6 +14,7 @@ function App() {
         <Header></Header>
         <Hero></Hero>
         <TechStack></TechStack>
+        <Career></Career>
         <Showcase></Showcase>
         <ContactForm></ContactForm>
         <Footer></Footer>

@@ -72,7 +72,10 @@ const imageLogos = [
 
 const TechStack = () => {
   return (
-    <div className="tech-stack-section py-20 mt-10 md:mt-0 bg-gray-50">
+    <div
+      id="stack"
+      className="tech-stack-section py-20 mt-10 md:mt-0 bg-gray-50"
+    >
       <h2 className="text-3xl font-bold pb-10 text-center text-brandblack">
         TECH STACK
       </h2>

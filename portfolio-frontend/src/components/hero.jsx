@@ -20,7 +20,10 @@ const downloadCV = () => {
 
 // Hero Intro
 const HeroIntro = () => (
-  <div className="hero-division pt-40 md:pt-49 lg:pt-0 flex-1 flex flex-col justify-center items-center text-center space-y-6 md:space-y-8 max-w-2xl md:max-w-3xl">
+  <div
+    id="home"
+    className="hero-division pt-40 md:pt-49 lg:pt-0 flex-1 flex flex-col justify-center items-center text-center space-y-6 md:space-y-8 max-w-2xl md:max-w-3xl"
+  >
     <SplitText
       text="Hi, I am!"
       className="text-4xl md:text-5xl font-semibold text-brandblack"
