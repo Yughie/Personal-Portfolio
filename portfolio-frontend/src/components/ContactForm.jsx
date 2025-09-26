@@ -6,6 +6,7 @@ import LinkedinIcon from "../assets/linkedin.svg";
 import ProfileImage from "../assets/contact-image.png";
 import mail from "../assets/mail.svg";
 import phone from "../assets/phone.svg";
+import ContactFormOnly from "./ContactFormOnly";
 
 export default function ContactForm() {
   const [form, setForm] = useState({
@@ -51,7 +52,7 @@ export default function ContactForm() {
         <img src={mail} alt="Mail Icon" className="w-15 mx-auto  my-5" />
         <p className="font-semibold">yughiep@.gmail.com</p>
         <img src={phone} alt="Phone Icon" className="w-15 mx-auto my-5" />
-        <p className="font-semibold">(63+) 123 456 789</p>
+        <p className="font-semibold">(63+) 938 129 3241</p>
         <div className="flex justify-center mt-6 w-full space-x-6">
           <a
             href="https://www.facebook.com/ymperez12"
@@ -88,100 +89,7 @@ export default function ContactForm() {
           </a>
         </div>
       </div>
-      <div className="flex-1 contact mt-20 md:my-20 md:px-20 lg:my-0 transition-all lg:flex lg:justify-center lg:items-center">
-        <form
-          onSubmit={handleSubmit}
-          className="bg-brandwhite align-center p-10 rounded-md w-full gap-4 flex flex-col"
-        >
-          <h2 className="text-brandblack font-bold text-3xl my-6">
-            Send a Message
-          </h2>
-          <div className="flex flex-col">
-            <label
-              htmlFor="Name"
-              className="text-brandgrey font-bold text-left w-full"
-            >
-              Name*
-            </label>
-            <input
-              type="text"
-              name="name"
-              placeholder="Name"
-              value={form.name}
-              onChange={handleChange}
-              required
-              className={
-                "p-2 rounded-md border border-brandblack bg-[#DFDFDF] text-brandblack"
-              }
-            />
-          </div>
-
-          <div className="flex flex-col">
-            <label
-              htmlFor="email"
-              className="text-brandgrey font-bold text-left w-full"
-            >
-              Email*
-            </label>
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={form.email}
-              onChange={handleChange}
-              required
-              className={
-                "p-2 rounded-md border border-brandblack bg-[#DFDFDF] text-brandblack"
-              }
-            />
-          </div>
-          <div className="flex flex-col">
-            <label
-              htmlFor="subject"
-              className="text-brandgrey font-bold text-left w-full"
-            >
-              Subject*
-            </label>
-            <input
-              type="text"
-              name="subject"
-              placeholder="Subject"
-              value={form.subject}
-              onChange={handleChange}
-              required
-              className={
-                "p-2 rounded-md border border-brandblack bg-[#DFDFDF] text-brandblack"
-              }
-            />
-          </div>
-          <div className="flex flex-col">
-            <label
-              htmlFor="body"
-              className="text-brandgrey font-bold text-left w-full"
-            >
-              Message*
-            </label>
-            <textarea
-              name="body"
-              placeholder="Message"
-              value={form.body}
-              onChange={handleChange}
-              required
-              className={
-                "p-2 rounded-md border border-brandblack bg-[#DFDFDF] text-brandblack h-40"
-              }
-            />
-          </div>
-
-          <button
-            type="submit"
-            className="bg-brandblue w-[300px] mx-auto mt-5 text-brandwhite p-2 mb-10 rounded-md font-bold hover:bg-blue-700 transition-colors"
-          >
-            Send
-          </button>
-          {status && <p>{status}</p>}
-        </form>
-      </div>
+      <ContactFormOnly />
     </section>
   );
 }

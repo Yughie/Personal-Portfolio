@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import logo from "../assets/LogoIcon.svg"; // your logo path
+import ContactModal from "./ContactModal.jsx";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const navLinks = ["Home", "Stack", "Career", "Project", "Template"]; // add your links
 
@@ -30,8 +32,8 @@ export default function Header() {
         {/* Right: Contact Button (Desktop) */}
         <div className="hidden md:flex">
           <a
-            href="#contact"
             className="bg-brandyellow hover:bg-hoveryellow text-brandblack hover:text-brandblack px-14 py-2 rounded-lg font-bold transition"
+            onClick={() => setIsModalOpen(true)}
           >
             Contact
           </a>
@@ -67,8 +69,10 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="#contact"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                setIsModalOpen(true);
+              }}
               className="bg-brandyellow hover:bg-hoveryellow text-brandblack hover:text-brandblack px-4 py-2 rounded-lg text-center"
             >
               Contact
@@ -76,6 +80,11 @@ export default function Header() {
           </nav>
         </div>
       )}
+
+      <ContactModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </header>
   );
 }
