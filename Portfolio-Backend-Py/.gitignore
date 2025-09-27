@@ -1,0 +1,38 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+.Python
+
+# Django database and logs
+*.sqlite3
+*.log
+db.sqlite3
+
+# Django migrations (keep __init__.py)
+*/migrations/*.py
+!*/migrations/__init__.py
+
+# Environment / secrets
+.env
+*.env
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+pip-wheel-metadata/
+
+# IDE / editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db

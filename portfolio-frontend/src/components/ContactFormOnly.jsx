@@ -11,6 +11,7 @@ export default function ContactFormOnly() {
   });
 
   const [status, setStatus] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -18,13 +19,30 @@ export default function ContactFormOnly() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!/\S+@\S+\.\S+/.test(form.email)) {
+      setStatus("Please enter a valid email address.");
+      return;
+    }
+
+    setLoading(true);
     try {
-      await axios.post("http://127.0.0.1:8000/api/send-email", form);
+      await axios.post("http://127.0.0.1:8000/contact/", form),
+        {
+          headers: { "Content-Type": "application/json" },
+        };
       setStatus("Message sent successfully!");
       setForm({ name: "", email: "", subject: "", body: "" });
     } catch (error) {
-      console.error(error);
-      setStatus("Error sending message. Check console.");
+      if (error.response) {
+        // Server responded with a status (400, 500, etc.)
+        setStatus(`Error: ${error.response.data.message || "Server error"}`);
+      } else {
+        // No response (network error)
+        setStatus("Error: Could not connect to the server.");
+      }
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -116,9 +134,10 @@ export default function ContactFormOnly() {
 
         <button
           type="submit"
+          disabled={loading}
           className="bg-brandblue w-[300px] mx-auto mt-5 text-brandwhite p-2 mb-10 rounded-md font-bold hover:bg-blue-700 transition-colors"
         >
-          Send
+          {loading ? "Sending..." : "Send"}
         </button>
         {status && <p>{status}</p>}
       </form>
