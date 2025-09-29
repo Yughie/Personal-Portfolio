@@ -10,8 +10,19 @@ export default function ContactModal({ isOpen, onClose }) {
       }
     };
     window.addEventListener("keydown", handleEsc);
-    return () => window.removeEventListener("keydown", handleEsc);
-  }, [onClose]);
+
+    // Disable background scroll when modal is open
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    // Cleanup on unmount
+    return () => {
+      window.removeEventListener("keydown", handleEsc);
+      document.body.style.overflow = "auto"; // reset scroll
+    };
+  }, [isOpen, onClose]);
 
   if (!isOpen) return null;
 

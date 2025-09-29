@@ -58,10 +58,10 @@ export default function ContactFormOnly() {
   };
 
   return (
-    <div className="flex-1 contact lg:mt-20 md:my-20 md:px-20 lg:my-0 transition-all lg:flex lg:justify-center lg:items-center">
+    <div className="flex-1 contact md:my-20 md:px-20 lg:my-0 transition-all lg:flex lg:justify-center lg:items-center">
       <form
         onSubmit={handleSubmit}
-        className="bg-brandwhite align-center  rounded-md w-full gap-4 flex flex-col"
+        className="bg-brandwhite align-center p-4 lg:p-12 rounded-md w-full gap-4 flex flex-col"
       >
         <h2 className="text-brandblack font-bold text-3xl my-6">
           Send a Message
