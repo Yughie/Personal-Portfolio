@@ -1,7 +1,8 @@
-from django.core.mail import send_mail
+from django.core.mail import send_mail, BadHeaderError
 from django.http import JsonResponse #Communicate to react using http with JSON data
 from django.views.decorators.csrf import csrf_exempt #Make testing easier
 import json #help django understand the JSON we send from react 
+import os
 
 #Like office worker this handles the message, The frontend is the form 
 @csrf_exempt 
@@ -18,14 +19,18 @@ def contact_form(request):
             subject = data.get('subject')
             body =  data.get('body')
 
+            # DEBUG: Print to console / Render logs
+            print("Received data:", data)
+
             # Compose message
             message = f"From: {name} <{email}>\n\n{body}"
+            recipient = os.environ.get("EMAIL_HOST_USER")
 
             send_mail(
                 subject=subject,
                 message=message,
-                from_email=email,
-                recipient_list=["yughiep@gmail.com"],  # where you want to receive it
+                from_email=os.environ.get("EMAIL_HOST_USER"),
+                recipient_list=[recipient],  # where you want to receive it
                 fail_silently=False,
             )
 
@@ -33,8 +38,11 @@ def contact_form(request):
                 "success": True,
                 "info": "Email sent successfully!"
             })
+        except BadHeaderError:
+            return JsonResponse({"success": False, "error": "Invalid header found."}, status=400)
         except Exception as e: 
             #If something went wrong, tell React it failed
+            print(f"Error sending email: {e}")
             return JsonResponse({
                 "success": False, 
                 "error": str(e)

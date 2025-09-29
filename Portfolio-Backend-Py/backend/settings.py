@@ -21,15 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-import os
-
 SECRET_KEY = os.environ.get(
     'DJANGO_SECRET_KEY',
     'django-insecure-^!x-okv4@*tao*2guxsb)yt@64*db)u0s$*4ko12e7gu4wj^8%'
 )
 if not SECRET_KEY:
     raise RuntimeError("DJANGO_SECRET_KEY environment variable not set")
-
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -68,12 +65,31 @@ STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-# Allow your React app to talk to Django
+# CORS Settings - Allow your React app to talk to Django
 CORS_ALLOWED_ORIGINS = [
     "https://yughie-perez.vercel.app", 
     "http://localhost:5173",  # your React dev server
     "http://127.0.0.1:5173",
-    
+]
+
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
+
+# CRITICAL: This allows CSRF to work with CORS requests
+CSRF_TRUSTED_ORIGINS = [
+    "https://yughie-perez.vercel.app",
+    "https://personal-portfolio-eonr.onrender.com",
 ]
 
 ROOT_URLCONF = 'backend.urls'
@@ -126,7 +142,6 @@ USE_I18N = True
 USE_TZ = True
 
 
-
 # Database (Render provides DATABASE_URL env var)
 DATABASES = {
     'default': dj_database_url.config(default='sqlite:///db.sqlite3')
@@ -137,13 +152,11 @@ DATABASES = {
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# settings.py
-
+# Email Settings
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
-EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")  # NOT your normal password
+EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-
