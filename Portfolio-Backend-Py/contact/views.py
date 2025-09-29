@@ -1,3 +1,4 @@
+from django.core.mail import send_mail
 from django.http import JsonResponse #Communicate to react using http with JSON data
 from django.views.decorators.csrf import csrf_exempt #Make testing easier
 import json #help django understand the JSON we send from react 
@@ -17,20 +18,27 @@ def contact_form(request):
             subject = data.get('subject')
             body =  data.get('body')
 
+            # Compose message
+            message = f"From: {name} <{email}>\n\n{body}"
+
+            send_mail(
+                subject=subject,
+                message=message,
+                from_email=email,
+                recipient_list=["yughiep@gmail.com"],  # where you want to receive it
+                fail_silently=False,
+            )
+
             return JsonResponse({
                 "success": True,
-                "name": name,
-                "email": email,
-                "subject": subject,
-                "body": body,
-                "info": "Form submitted successfully!"
+                "info": "Email sent successfully!"
             })
         except Exception as e: 
             #If something went wrong, tell React it failed
             return JsonResponse({
                 "success": False, 
-                "error": "Only POST allowed"
-            }, status=405)
+                "error": str(e)
+            }, status=500)
 
      # If user visits without POST (e.g., GET request)
     return JsonResponse({"status": "ready", "message": "Send your data here."})

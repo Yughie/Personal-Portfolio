@@ -21,13 +21,13 @@ export default function ContactModal({ isOpen, onClose }) {
       onClick={onClose}
     >
       <div
-        className="relative bg-white rounded-lg shadow-lg w-[90%]  max-w-3xl p-6"
+        className="relative bg-white rounded-lg shadow-lg w-[90%] max-w-3xl max-h-[90vh] overflow-y-auto p-6"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 bg-brandblue hover:bg-blue-700  text-brandblack text-xl font-bold"
+          className="sticky top-2 float-right bg-brandblue hover:bg-blue-700 text-brandwhite text-xl font-bold px-2 py-1 rounded"
         >
           ✕
         </button>

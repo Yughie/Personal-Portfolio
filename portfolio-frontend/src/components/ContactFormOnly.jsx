@@ -1,4 +1,5 @@
 // components/ContactFormOnly.jsx
+
 import { useState } from "react";
 import axios from "axios";
 
@@ -12,6 +13,7 @@ export default function ContactFormOnly() {
 
   const [status, setStatus] = useState("");
   const [loading, setLoading] = useState(false);
+  const [responseMessage, setResponseMessage] = useState(null);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -27,16 +29,25 @@ export default function ContactFormOnly() {
 
     setLoading(true);
     try {
-      await axios.post("http://127.0.0.1:8000/contact/", form),
-        {
-          headers: { "Content-Type": "application/json" },
-        };
-      setStatus("Message sent successfully!");
-      setForm({ name: "", email: "", subject: "", body: "" });
+      const res = await axios.post("http://127.0.0.1:8000/contact/", form, {
+        headers: { "Content-Type": "application/json" },
+      });
+
+      // FRONT END DATA RESPONSE
+      const data = res.data;
+
+      if (data.success) {
+        setResponseMessage(`✅ Success: ${data.info}`);
+        setStatus("Message sent successfully!");
+        setForm({ name: "", email: "", subject: "", body: "" });
+      } else {
+        setResponseMessage(`❌ Error: ${data.error}`);
+        setStatus("Something went wrong.");
+      }
     } catch (error) {
       if (error.response) {
         // Server responded with a status (400, 500, etc.)
-        setStatus(`Error: ${error.response.data.message || "Server error"}`);
+        setResponseMessage("⚠️ Network error, server not responding.");
       } else {
         // No response (network error)
         setStatus("Error: Could not connect to the server.");
@@ -47,10 +58,10 @@ export default function ContactFormOnly() {
   };
 
   return (
-    <div className="flex-1 contact mt-20 md:my-20 md:px-20 lg:my-0 transition-all lg:flex lg:justify-center lg:items-center">
+    <div className="flex-1 contact lg:mt-20 md:my-20 md:px-20 lg:my-0 transition-all lg:flex lg:justify-center lg:items-center">
       <form
         onSubmit={handleSubmit}
-        className="bg-brandwhite align-center p-10 rounded-md w-full gap-4 flex flex-col"
+        className="bg-brandwhite align-center  rounded-md w-full gap-4 flex flex-col"
       >
         <h2 className="text-brandblack font-bold text-3xl my-6">
           Send a Message
@@ -135,10 +146,11 @@ export default function ContactFormOnly() {
         <button
           type="submit"
           disabled={loading}
-          className="bg-brandblue w-[300px] mx-auto mt-5 text-brandwhite p-2 mb-10 rounded-md font-bold hover:bg-blue-700 transition-colors"
+          className="bg-brandblue w-[200px] mx-auto mt-5 text-brandwhite p-2 mb-10 rounded-md font-bold hover:bg-blue-700 transition-colors"
         >
           {loading ? "Sending..." : "Send"}
         </button>
+        {responseMessage && <p>{responseMessage}</p>}
         {status && <p>{status}</p>}
       </form>
     </div>
