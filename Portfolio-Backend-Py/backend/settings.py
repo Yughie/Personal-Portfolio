@@ -70,9 +70,10 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Allow your React app to talk to Django
 CORS_ALLOWED_ORIGINS = [
+    "https://yughie-perez.vercel.app", 
     "http://localhost:5173",  # your React dev server
     "http://127.0.0.1:5173",
-    "https://yughie-perez.vercel.app", 
+    
 ]
 
 ROOT_URLCONF = 'backend.urls'
@@ -142,7 +143,7 @@ EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = "yughiep@gmail.com"
-EMAIL_HOST_PASSWORD = "vmyaenpimrhxtvnr"  # NOT your normal password
+EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")  # NOT your normal password
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
