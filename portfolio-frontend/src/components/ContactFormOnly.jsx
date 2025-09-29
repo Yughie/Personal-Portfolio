@@ -29,9 +29,13 @@ export default function ContactFormOnly() {
 
     setLoading(true);
     try {
-      const res = await axios.post("http://127.0.0.1:8000/contact/", form, {
-        headers: { "Content-Type": "application/json" },
-      });
+      const res = await axios.post(
+        "https://personal-portfolio-eonr.onrender.com/contact/",
+        form,
+        {
+          headers: { "Content-Type": "application/json" },
+        }
+      );
 
       // FRONT END DATA RESPONSE
       const data = res.data;
