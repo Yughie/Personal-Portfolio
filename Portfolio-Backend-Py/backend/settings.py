@@ -68,8 +68,8 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # CORS Settings - Allow your React app to talk to Django
 CORS_ALLOWED_ORIGINS = [
     "https://yughie-perez.vercel.app", 
-    "http://localhost:5173",  # your React dev server
-    "http://127.0.0.1:5173",
+    "http://127.0.0.1:5173", 
+    "https://personal-portfolio-eonr.onrender.com",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
