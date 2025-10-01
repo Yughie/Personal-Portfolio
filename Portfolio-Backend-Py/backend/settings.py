@@ -69,7 +69,7 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 CORS_ALLOWED_ORIGINS = [
     "https://yughie-perez.vercel.app", 
     "http://127.0.0.1:5173", 
-    "https://personal-portfolio-eonr.onrender.com",
+   
 ]
 
 CORS_ALLOW_CREDENTIALS = True
@@ -89,7 +89,7 @@ CORS_ALLOW_HEADERS = [
 # CRITICAL: This allows CSRF to work with CORS requests
 CSRF_TRUSTED_ORIGINS = [
     "https://yughie-perez.vercel.app",
-    "https://personal-portfolio-eonr.onrender.com",
+    
 ]
 
 ROOT_URLCONF = 'backend.urls'
