@@ -44,7 +44,7 @@ def contact_form(request):
 
             send_smtp_email = sib_api_v3_sdk.SendSmtpEmail(
                 to=[{"email": os.environ.get("EMAIL_HOST_USER")}],
-                sender={"email": "your_verified_sender@yourdomain.com",
+                sender={"email": "yughiep@gmail.com",
                         "name": name},
                 reply_to={"email": email},
                 subject=subject,
