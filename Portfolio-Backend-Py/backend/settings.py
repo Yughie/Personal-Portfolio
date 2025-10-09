@@ -30,9 +30,10 @@ if not SECRET_KEY:
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DJANGO_DEBUG", "False") == "True"
+DEBUG = False
 
-ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "localhost").split(",")
+
+ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "127.0.0.1").split(",")
 
 
 # Application definition
@@ -69,6 +70,7 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 CORS_ALLOWED_ORIGINS = [
     "https://yughie-perez.vercel.app",
     "http://127.0.0.1:5173",
+    "https://personal-portfolio-9m1m.onrender.com/",
 
 ]
 
@@ -89,6 +91,7 @@ CORS_ALLOW_HEADERS = [
 # CRITICAL: This allows CSRF to work with CORS requests
 CSRF_TRUSTED_ORIGINS = [
     "https://yughie-perez.vercel.app",
+    "https://personal-portfolio-9m1m.onrender.com/",
 
 ]
 
@@ -153,10 +156,10 @@ DATABASES = {
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Email Settings
-EMAIL_BACKEND = os.environ.get("EMAIL_BACKEND")
-EMAIL_HOST = os.environ.get("EMAIL_HOST")
-EMAIL_PORT = os.environ.get("EMAIL_PORT")
-EMAIL_USE_TLS = os.environ.get("EMAIL_USE_TLS")
-EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
-EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp-relay.brevo.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = '9854a0001@smtp-brevo.com'
+EMAIL_HOST_PASSWORD = 'A7hK2prFR6vZdCcM'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
