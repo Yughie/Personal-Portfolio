@@ -9,33 +9,6 @@ import phone from "../assets/phone.svg";
 import ContactFormOnly from "./ContactFormOnly";
 
 export default function ContactForm() {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    body: "",
-  });
-
-  const [status, setStatus] = useState("");
-
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const resoponse = await axios.post(
-        "http://127.0.0.1:8000/api/send-email",
-        form
-      );
-      setStatus("Message sent successfully!");
-      setForm({ name: "", email: "", subject: "", body: "" });
-    } catch (error) {
-      console.error(error);
-      setStatus("Error Sending Message. Check console");
-    }
-  };
   return (
     <section
       id="contact"
