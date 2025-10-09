@@ -70,7 +70,7 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 CORS_ALLOWED_ORIGINS = [
     "https://yughie-perez.vercel.app",
     "http://127.0.0.1:5173",
-    "https://personal-portfolio-9m1m.onrender.com/",
+    "https://personal-portfolio-9m1m.onrender.com",
 
 ]
 

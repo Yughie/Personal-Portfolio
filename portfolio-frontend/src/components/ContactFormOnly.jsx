@@ -30,7 +30,7 @@ export default function ContactFormOnly() {
     setLoading(true);
     try {
       const res = await axios.post(
-        "https://personal-portfolio-eonr.onrender.com/contact/",
+        "https://personal-portfolio-9m1m.onrender.com/contact/",
         form,
         {
           headers: { "Content-Type": "application/json" },
