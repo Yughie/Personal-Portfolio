@@ -4,6 +4,8 @@ import Demo from "../assets/demo.svg";
 import DemoHover from "../assets/demo-hover.svg";
 import PortfolioWixProject from "../assets/PortfolioShowcase/Portfolio_WixProject.png";
 import PortfolioAdmission from "../assets/PortfolioShowcase/Portfolio_Admission.png";
+import PortfolioLifeFlow from "../assets/PortfolioShowcase/Portfolio_LifeFlow.png";
+import PortfolioCarwash from "../assets/PortfolioShowcase/Portfolio_CarWash.png";
 
 const ShowcasePortfolio = () => {
   return (
@@ -79,6 +81,90 @@ const ShowcasePortfolio = () => {
         </p>
         <a
           href="https://personal-portfolio-eta-rouge.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex items-center justify-center gap-2 absolute bottom-2 right-5 text-white underline px-3 py-2 rounded-lg hover:bg-opacity-20 transition hover:text-brandyellow"
+        >
+          Live Demo
+          <img
+            src={Demo}
+            alt="Demo"
+            className="w-8 h-8 block group-hover:hidden"
+          />
+          <img
+            src={DemoHover}
+            alt="Demo hover"
+            className="w-8 h-8 hidden group-hover:block"
+          />
+        </a>
+      </div>
+      <div className="relative bg-brandblue border rounded-2xl p-6 shadow-xl animate-fade-in  max-w-lg min-h-[550px] max-h-[550px]  w-full hover:scale-105 transition-transform duration-300">
+        <img
+          src={BookmarkIcon}
+          alt="icon"
+          className="absolute top-0 right-8 w-25 z-10"
+        />
+        <div className="aspect-w-16 aspect-h-9 w-full mb-4">
+          <img
+            src={PortfolioLifeFlow}
+            alt="Portfolio Project Mock up"
+            className="w-full h-full object-cover border-none rounded-xl border-2 "
+            style={{ aspectRatio: "16/9" }}
+          />
+        </div>
+        <h3 className="font-bold text-lg mb-2 text-brandyellow">
+          LIFE FLOW: BLOOD AND ORGAN MANAGEMENT SYSTEM
+        </h3>
+        <p className=" mb-2 text-brandwhite">
+          LifeFlow is a web-based blood donation management system that connects
+          donors and recipients efficiently. Built with PHP, MySQL, HTML, CSS,
+          and JavaScript, it streamlines registration and record management
+          through a user-friendly interface.
+        </p>
+        <a
+          href="https://github.com/Yughie/Life-Flow"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex items-center justify-center gap-2 absolute bottom-2 right-5 text-white underline px-3 py-2 rounded-lg hover:bg-opacity-20 transition hover:text-brandyellow"
+        >
+          Live Demo
+          <img
+            src={Demo}
+            alt="Demo"
+            className="w-8 h-8 block group-hover:hidden"
+          />
+          <img
+            src={DemoHover}
+            alt="Demo hover"
+            className="w-8 h-8 hidden group-hover:block"
+          />
+        </a>
+      </div>
+      <div className="relative bg-brandblue border rounded-2xl p-6 shadow-xl animate-fade-in  max-w-lg min-h-[550px] max-h-[550px]  w-full hover:scale-105 transition-transform duration-300">
+        <img
+          src={BookmarkIcon}
+          alt="icon"
+          className="absolute top-0 right-8 w-25 z-10"
+        />
+        <div className="aspect-w-16 aspect-h-9 w-full mb-4">
+          <img
+            src={PortfolioCarwash}
+            alt="Portfolio Project Mock up"
+            className="w-full h-full object-cover border-none rounded-xl border-2 "
+            style={{ aspectRatio: "16/9" }}
+          />
+        </div>
+        <h3 className="font-bold text-lg mb-2 text-brandyellow">
+          CAR WASH MANAGEMENT SYSTEM
+        </h3>
+        <p className=" mb-2 text-brandwhite">
+          Income Statement and Carwash System is a web-based application
+          designed to manage carwash operations and track daily income. It helps
+          record transactions, generate income reports, and organize financial
+          data efficiently using React, Node.js, Express, and MySQL.
+        </p>
+        <a
+          href="https://github.com/Yughie/Income-Statement-and-Log-Mangement-System"
           target="_blank"
           rel="noopener noreferrer"
           className="group flex items-center justify-center gap-2 absolute bottom-2 right-5 text-white underline px-3 py-2 rounded-lg hover:bg-opacity-20 transition hover:text-brandyellow"

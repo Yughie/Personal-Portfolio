@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import SplitText from "./SplitText";
 import FacebookIcon from "../assets/facebook.svg";
 import GithubIcon from "../assets/github.svg";
 import LinkedinIcon from "../assets/linkedin.svg";
 import CV from "../assets/CV.pdf";
 import ProfileImage from "../assets/mainprofile.png";
+import ContactModal from "./ContactModal.jsx";
 
 const handleAnimationComplete = () => {
   console.log("All letters have animated!");
@@ -96,34 +97,42 @@ const HeroImage = () => (
 );
 
 // Hero About
-const HeroAbout = () => (
-  <div className="hero-division flex flex-col items-center text-center md:text-center">
-    <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-brandblue">
-      SOFTWARE ENGINEER
-    </h2>
-    <p className="text-base md:text-md lg:text-lg py-8 text-brandblack max-w-xs md:max-w-lg lg:max-w-4xl">
-      a{" "}
-      <span className="font-bold text-brandblue">
-        Computer Science graduate (Cum Laude)
-      </span>{" "}
-      and <span className="font-bold text-brandblue">Software Engineer </span>{" "}
-      who transforms ideas into functional, reliable, and user-friendly
-      applications. From developing server-side logic and APIs to creating
-      seamless front-end experiences, I focus on building software that meets
-      both technical and business goals. My creative background in video editing
-      and multimedia design adds an extra layer to how I approach
-      problem-solving and user experience.
-    </p>
-    <div className="md:flex">
-      <a
-        href="#contact"
-        className="bg-brandyellow hover:bg-hoveryellow text-brandblack hover:text-brandblack px-16 py-3 rounded-lg font-bold transition"
-      >
-        Contact
-      </a>
+const HeroAbout = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  return (
+    <div className="hero-division flex flex-col items-center text-center md:text-center">
+      <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-brandblue">
+        SOFTWARE ENGINEER
+      </h2>
+      <p className="text-base md:text-md lg:text-lg py-8 text-brandblack max-w-xs md:max-w-lg lg:max-w-4xl">
+        a{" "}
+        <span className="font-bold text-brandblue">
+          Computer Science graduate (Cum Laude)
+        </span>{" "}
+        and <span className="font-bold text-brandblue">Software Engineer </span>{" "}
+        who transforms ideas into functional, reliable, and user-friendly
+        applications. From developing server-side logic and APIs to creating
+        seamless front-end experiences, I focus on building software that meets
+        both technical and business goals. My creative background in video
+        editing and multimedia design adds an extra layer to how I approach
+        problem-solving and user experience.
+      </p>
+      <div className="md:flex">
+        <a
+          className="bg-brandyellow hover:bg-hoveryellow text-brandblack hover:text-brandblack px-16 py-3 rounded-lg font-bold transition"
+          onClick={() => setIsModalOpen(true)}
+        >
+          Contact
+        </a>
+      </div>
+      <ContactModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </div>
-  </div>
-);
+  );
+};
 
 // Main Hero Section
 const Hero = () => {

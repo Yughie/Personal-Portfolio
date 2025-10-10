@@ -10,6 +10,7 @@ import phpLogo from "../assets/TechStack/Php.svg";
 import laravelLogo from "../assets/TechStack/Laravel.svg";
 import sqlLogo from "../assets/TechStack/Sql.svg";
 import mysqlLogo from "../assets/TechStack/MySql.svg";
+import pythonLogo from "../assets/TechStack/Python.svg";
 
 // CORRECTED PATHS: Removed "/public" from the beginning of each src
 const imageLogos = [
@@ -37,6 +38,11 @@ const imageLogos = [
     src: reactLogo,
     alt: "React JS",
     href: "https://www.geeksforgeeks.org/reactjs/react/",
+  },
+  {
+    src: pythonLogo,
+    alt: "Python Logo",
+    href: "https://www.w3schools.com/python/",
   },
   {
     src: nodeLogo,
