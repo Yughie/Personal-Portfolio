@@ -17,6 +17,45 @@ const Career = () => {
         <VerticalTimeline>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
+            contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+            contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
+            date="July 2024 -  September 2024"
+            iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+            icon={
+              <div className="flex items-center justify-center w-full h-full">
+                <img src={ItIntern} alt="Internship" className="w-8 h-8" />
+              </div>
+            }
+          >
+            <h3 className="vertical-timeline-element-title font-bold text-brandwhite text-xl">
+              BOOTCAMP TRAINEE
+            </h3>
+            <h4 className="vertical-timeline-element-subtitle pb-4">ERNI</h4>
+            <ul className="list-disc ml-5 space-y-2 text-brandwhite text-left">
+              <li>
+                Participate actively in all training sessions, workshops, and
+                group activities.
+              </li>
+              <li>
+                Complete assigned tasks, exercises, and real-world projects
+                within given deadlines.
+              </li>
+              <li>
+                Collaborate with peers to solve problems, share insights, and
+                provide feedback.
+              </li>
+              <li>
+                Apply newly learned concepts to practical scenarios or case
+                studies.
+              </li>
+              <li>
+                • Attend mentorship sessions and respond constructively to
+                feedback from trainers.
+              </li>
+            </ul>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
             contentStyle={{ background: "rgb(1, 150, 243)", color: "#fff" }}
             contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
             date="2021 - present"
