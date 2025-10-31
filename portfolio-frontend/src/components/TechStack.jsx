@@ -11,7 +11,7 @@ import laravelLogo from "../assets/TechStack/Laravel.svg";
 import sqlLogo from "../assets/TechStack/Sql.svg";
 import mysqlLogo from "../assets/TechStack/MySql.svg";
 import pythonLogo from "../assets/TechStack/Python.svg";
-import postgreSqlLogo from "../assets/TechStack/PostgreSQL.svg";
+import postgreSqlLogo from "../assets/TechStack/PostgreSql.svg";
 import djangoLogo from "../assets/TechStack/Django.svg";
 
 // CORRECTED PATHS: Removed "/public" from the beginning of each src
