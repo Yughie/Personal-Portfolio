@@ -19,11 +19,15 @@ const Career = () => {
             className="vertical-timeline-element--work"
             contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
             contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
-            date="July 2024 -  September 2024"
+            date="October 2025 -  Present"
             iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
             icon={
               <div className="flex items-center justify-center w-full h-full">
-                <img src={ItIntern} alt="Internship" className="w-8 h-8" />
+                <img
+                  src={ItIntern}
+                  alt="Bootcamp Trainee"
+                  className="w-8 h-8"
+                />
               </div>
             }
           >
@@ -33,24 +37,24 @@ const Career = () => {
             <h4 className="vertical-timeline-element-subtitle pb-4">ERNI</h4>
             <ul className="list-disc ml-5 space-y-2 text-brandwhite text-left">
               <li>
-                Participate actively in all training sessions, workshops, and
-                group activities.
+                Actively participated in multiple training sessions and
+                workshops, engaging in discussions and group tasks to strengthen
+                understanding of core topics.
               </li>
               <li>
-                Complete assigned tasks, exercises, and real-world projects
-                within given deadlines.
+                Completed all assigned exercises and real-world projects within
+                the given deadlines, maintaining consistency and attention to
+                detail.
               </li>
               <li>
-                Collaborate with peers to solve problems, share insights, and
-                provide feedback.
+                Collaborated with different peers to solve project challenges,
+                share insights, and provide constructive feedback that improved
+                team output.
               </li>
               <li>
-                Apply newly learned concepts to practical scenarios or case
-                studies.
-              </li>
-              <li>
-                • Attend mentorship sessions and respond constructively to
-                feedback from trainers.
+                Applied newly learned concepts to practical scenarios and case
+                studies, demonstrating the ability to translate theory into real
+                application.
               </li>
             </ul>
           </VerticalTimelineElement>
@@ -58,7 +62,7 @@ const Career = () => {
             className="vertical-timeline-element--work"
             contentStyle={{ background: "rgb(1, 150, 243)", color: "#fff" }}
             contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
-            date="2021 - present"
+            date="2021 - Present"
             iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
             icon={
               <div className="flex items-center justify-center w-full h-full">

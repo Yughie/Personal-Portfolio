@@ -11,6 +11,8 @@ import laravelLogo from "../assets/TechStack/Laravel.svg";
 import sqlLogo from "../assets/TechStack/Sql.svg";
 import mysqlLogo from "../assets/TechStack/MySql.svg";
 import pythonLogo from "../assets/TechStack/Python.svg";
+import postgreSqlLogo from "../assets/TechStack/PostgreSQL.svg";
+import djangoLogo from "../assets/TechStack/django.svg";
 
 // CORRECTED PATHS: Removed "/public" from the beginning of each src
 const imageLogos = [
@@ -45,35 +47,40 @@ const imageLogos = [
     href: "https://www.w3schools.com/python/",
   },
   {
-    src: nodeLogo,
-    alt: "Node.js", // Corrected alt text
-    href: "https://www.geeksforgeeks.org/node-js/nodejs/",
+    src: djangoLogo,
+    alt: "Django Logo",
+    href: "https://www.w3schools.com/django/index.php",
   },
-  {
-    src: firebaseLogo,
-    alt: "Firebase", // Corrected alt text
-    href: "https://www.geeksforgeeks.org/firebase/firebase-tutorial/",
-  },
-  {
-    src: phpLogo,
-    alt: "PHP", // Corrected alt text
-    href: "https://www.w3schools.com/php/",
-  },
-  {
-    src: laravelLogo,
-    alt: "Laravel", // Corrected alt text
-    href: "https://www.geeksforgeeks.org/php/introduction-to-laravel-and-mvc-framework/",
-  },
+  // {
+  //   src: nodeLogo,
+  //   alt: "Node.js", // Corrected alt text
+  //   href: "https://www.geeksforgeeks.org/node-js/nodejs/",
+  // },
+  // {
+  //   src: firebaseLogo,
+  //   alt: "Firebase", // Corrected alt text
+  //   href: "https://www.geeksforgeeks.org/firebase/firebase-tutorial/",
+  // },
+  // {
+  //   src: phpLogo,
+  //   alt: "PHP", // Corrected alt text
+  //   href: "https://www.w3schools.com/php/",
+  // },
   {
     src: sqlLogo,
     alt: "SQL", // Corrected alt text
     href: "https://www.w3schools.com/sql/",
   },
   {
-    src: mysqlLogo,
-    alt: "MySQL", // Corrected alt text
-    href: "https://www.w3schools.com/MySQL/",
+    src: postgreSqlLogo,
+    alt: "PostgreSQL", // Corrected alt text
+    href: "https://www.w3schools.com/postgresql/",
   },
+  // {
+  //   src: mysqlLogo,
+  //   alt: "MySQL", // Corrected alt text
+  //   href: "https://www.w3schools.com/MySQL/",
+  // },
 ];
 
 const TechStack = () => {

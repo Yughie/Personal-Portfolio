@@ -102,21 +102,17 @@ const HeroAbout = () => {
 
   return (
     <div className="hero-division flex flex-col items-center text-center md:text-center">
-      <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-brandblue">
-        SOFTWARE ENGINEER
+      <h2 className="text-3xl md:text-3xl lg:text-4xl font-semibold text-brandblue">
+        AI ENGINEER
       </h2>
       <p className="text-base md:text-md lg:text-lg py-8 text-brandblack max-w-xs md:max-w-lg lg:max-w-4xl">
-        a{" "}
-        <span className="font-bold text-brandblue">
-          Computer Science graduate (Cum Laude)
-        </span>{" "}
-        and <span className="font-bold text-brandblue">Software Engineer </span>{" "}
-        who transforms ideas into functional, reliable, and user-friendly
-        applications. From developing server-side logic and APIs to creating
-        seamless front-end experiences, I focus on building software that meets
-        both technical and business goals. My creative background in video
-        editing and multimedia design adds an extra layer to how I approach
-        problem-solving and user experience.
+        As an <span className="font-bold text-brandblue">AI Engineer</span>, I’m
+        driven by curiosity and a deep passion for discovering new things. I’m
+        fascinated by how rapidly technology continues to evolve and eager to be
+        part of that growth. I approach challenges fearlessly, knowing that
+        every experience brings valuable lessons. My goal is to become a
+        prominent figure in the field of AI Engineering — and I’m determined to
+        seize every opportunity that brings me closer to that vision.
       </p>
       <div className="md:flex">
         <a
